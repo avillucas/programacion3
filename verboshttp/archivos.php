@@ -8,7 +8,7 @@
 	$data = Helper::getUsuarioParams();	
 	$lista =  new UsuariosLista();
 	$lista->save( new Usuario($data['nombre'], $data['clave']));	
-	Helper::printUsuario($lista->__toArray());	
+	Helper::printUsuario($lista);	
 	//	
 	
 

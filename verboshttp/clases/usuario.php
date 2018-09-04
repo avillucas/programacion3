@@ -29,7 +29,7 @@ class Usuario
 
 	public static function populate($item)
 	{
-		$usuario = new Usuario($item['nombre'],$item['clave'],$item['id']);
+		return  new Usuario($item['nombre'],$item['clave'],$item['id']);
 	}
 	
 	public function setId($id)

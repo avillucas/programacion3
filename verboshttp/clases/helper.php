@@ -11,14 +11,14 @@ class Helper
 		return $params;
 	}
 
-	public static function printUsuario($lista)
+	public static function printUsuario(UsuariosLista $usuariosLista)
 	{
-		echo '<h1>Lista</h1><ul>';
-		//foreach($usuarios as $usuario)
-		//for($i = 0 ; $i < $lista->count(); $i++)
-		while($usuario !== false ){					
-			echo '<li>'.$usuario->__toString().'</li>';			
-			$usuario = $lista->getNext();
+		echo '<h1>Lista</h1><ul>';		
+		$usuario = $usuariosLista->getNext();
+		while($usuario !== false)
+		{
+			echo '<li>'.$usuario->__toString().'</li>';						
+			$usuario = $usuariosLista->getNext();
 		}
 		echo '</ul>';
 	}
