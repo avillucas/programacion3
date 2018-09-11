@@ -1,9 +1,5 @@
 <?php 
-	define('DIR_CLASES','clases');
-	include_once(DIR_CLASES.DIRECTORY_SEPARATOR.'Helper.php');
-	include_once(DIR_CLASES.DIRECTORY_SEPARATOR.'IO.php');
-	include_once(DIR_CLASES.DIRECTORY_SEPARATOR.'usuario.php');
-	include_once(DIR_CLASES.DIRECTORY_SEPARATOR.'usuarioslista.php');	
+	include_once('init.php');
 	//
 	$data = Helper::getUsuarioParams();	
 	$lista =  new UsuariosLista();

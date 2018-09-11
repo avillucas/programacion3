@@ -1,5 +1,5 @@
 <?php 
-class Usuario
+class Usuario 
 {	
 	private $id;
 	private $nombre;
@@ -14,7 +14,7 @@ class Usuario
 
 	public function __toString()
 	{
-		return 'nombre:'.$this->nombre.' <br/>clave:'.$this->clave ;
+		return  'id:'.$this->nombre.'nombre:'.$this->nombre.' <br/>clave:'.$this->clave ;
 	}
 
 	public function __toArray()
