@@ -56,4 +56,12 @@ class Usuario
 	{
 		return $this->clave;
 	}
+
+	public function update(array $data)
+	{
+		if(isset($data['nombre']))
+			$this->setNombre($data['nombre']);
+		if(isset($data['clave']))
+			$this->setClave($data['clave']);
+	}
 }

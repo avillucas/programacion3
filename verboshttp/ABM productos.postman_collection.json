@@ -1,0 +1,81 @@
+{
+	"id": "983ea936-2894-32f9-ba87-88305f7e4549",
+	"name": "ABM productos",
+	"description": "Test para el tp 1 de programacion 3 ",
+	"order": [
+		"565629ae-bd9b-efef-1baf-d42f8432a30d",
+		"4ed727ce-0921-7987-a9b8-832cb45362d7"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1537312700768,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "4ed727ce-0921-7987-a9b8-832cb45362d7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/programacion3/verboshttp/index.php/usuario/25",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1537317831431,
+			"name": "GET USUARIO 1",
+			"description": "",
+			"collectionId": "983ea936-2894-32f9-ba87-88305f7e4549",
+			"responses": []
+		},
+		{
+			"id": "565629ae-bd9b-efef-1baf-d42f8432a30d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/programacion3/verboshttp/index.php/usuario",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nombre",
+					"value": "edgard",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "clave",
+					"value": "io",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1537317235535,
+			"name": "POST",
+			"description": "Carga de producto",
+			"collectionId": "983ea936-2894-32f9-ba87-88305f7e4549",
+			"responses": []
+		}
+	]
+}

@@ -54,7 +54,7 @@ class UsuariosLista
 		$items = IO::readJson(self::FILE_DIR,self::FILE_NAME);
 		if($items !== false)
 		{
-			$this->items = $items;
+			$this->items = (empty($items)) ? []:$items;
 		}
 	}
 

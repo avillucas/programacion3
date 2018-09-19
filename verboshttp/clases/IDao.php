@@ -1,8 +1,7 @@
 <?php 
-interface IDao
-{
-	public abstract static function create();
-	public abstract static function delete();
-	public abstract static function update();
+interface IEntity
+{	
+	public abstract static function save();
+	public abstract static function update(array $data);
 
 }

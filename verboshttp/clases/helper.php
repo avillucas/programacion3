@@ -11,7 +11,8 @@ class Helper
 		return $params;
 	}
 
-	public static function printUsuario(UsuariosLista $usuariosLista)
+
+	public static function printUsuarios(UsuariosLista $usuariosLista)
 	{
 		echo '<h1>Lista</h1><ul>';		
 		$usuario = $usuariosLista->getNext();
@@ -21,5 +22,33 @@ class Helper
 			$usuario = $usuariosLista->getNext();
 		}
 		echo '</ul>';
+	}
+
+
+	public static function printUsuario(Usuario $usuario)
+	{
+		
+		echo '<p>'.$usuario->__toString().'</p>';							
+		
+	}
+
+
+	public static function printUsuariosJson(UsuariosLista $usuariosLista)
+	{
+	
+		$usuario = $usuariosLista->getNext();
+		while($usuario !== false)
+		{
+			echo $usuario->__toJson();						
+			$usuario = $usuariosLista->getNext();
+		}	
+	}
+
+
+	public static function printUsuarioJson(Usuario $usuario)
+	{
+		
+		echo $usuario->__toJson();							
+		
 	}
 }
