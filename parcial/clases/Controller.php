@@ -2,26 +2,27 @@
 class Controller
 {
 	/**
-	 caso: cargarAlumno (post): Se deben guardar los siguientes datos: nombre, apellido, email y foto. Los
-		datos se guardan en el archivo de texto alumnos.txt, tomando el email como identificador.
+	 * 	caso: cargarAlumno (post): Se deben guardar los siguientes datos: nombre, apellido, email y foto. Los
+	 *  datos se guardan en el archivo de texto alumnos.txt, tomando el email como identificador.
 	**/
 	public static function cargarAlumno()
 	{
 		throw new Exception('No implementado aun ');
 	}
 /**
-caso: consultarAlumno (get): Se ingresa apellido, si coincide con algún registro del archivo alumno.txt se
-retorna todos los alumnos con dicho apellido, si no coincide se debe retornar “No existe alumno con apellido
-xxx” (xxx es el apellido que se busco) La búsqueda tiene que ser case insensitive
+ * caso: consultarAlumno (get): Se ingresa apellido, si coincide con algún registro del archivo alumno.txt se
+ * retorna todos los alumnos con dicho apellido, si no coincide se debe retornar “No existe alumno con apellido
+ * xxx” (xxx es el apellido que se busco) La búsqueda tiene que ser case insensitive
 **/
 	public static function consultarAlumno()
 	{
 		throw new Exception('No implementado aun ');
 	}
 	/**
-	3- (1 pts.) caso: cargarMateria (post): Se recibe el nombre de la materia, código de materia, el cupo de alumnos y
-el aula donde se dicta y se guardan los datos en el archivo materias.txt, tomando como identificador el código de
-la materia***/
+	 * 	3- (1 pts.) caso: cargarMateria (post): Se recibe el nombre de la materia, código de materia, el cupo de alumnos y
+	 * el aula donde se dicta y se guardan los datos en el archivo materias.txt, tomando como identificador el código de
+	 * la materia
+	 * **/
 
 	public static function cargarMateria()
 	{
@@ -30,8 +31,8 @@ la materia***/
 
 	/**
 	 * 4- (2pts.) caso: inscribirAlumno (get): Se recibe nombre, apellido, mail del alumno, materia y código de la materia
-*y se guarda en el archivo inscripciones.txt restando un cupo a la materia en el archivo materias.txt. Si no hay
-*cupo o la materia no existe informar cada caso particular	 *
+	*y se guarda en el archivo inscripciones.txt restando un cupo a la materia en el archivo materias.txt. Si no hay
+	*cupo o la materia no existe informar cada caso particular	 *
 	 * @return void
 	 */
 	public static function inscribirAlumno()

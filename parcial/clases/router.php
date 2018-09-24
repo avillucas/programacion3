@@ -1,6 +1,7 @@
 <?php 
 class Router
 {
+    /** */
     public static function getCaso()
     {
         if( !isset($_GET['caso'])) throw new Exception('El caso no fue definido');
