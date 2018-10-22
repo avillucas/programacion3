@@ -2,9 +2,9 @@
 class Router
 {
     /** */
-    public static function getCaso()
+    public static function getOpcion()
     {
-        if( !isset($_GET['opcion'])) throw new Exception('La opcion no fue definida');
+        if( !isset($_GET['opcion'])) throw new Exception('la opcion no fue definida');
         return  $_GET['opcion'];
     }
 
@@ -14,7 +14,6 @@ class Router
         return $_POST[$param];
     }
 
-    
     private static function headerStatus($statusCode ) {                
         $statusCodes = array (
             100 => 'Continue',
@@ -70,13 +69,37 @@ class Router
         );        
         if (isset($statusCodes[$statusCode])) {     
             $statusString  = $statusCodes[$statusCode];
-            header($_SERVER['SERVER_PROTOCOL'] . ' ' . $statusString, true, $statusCode);
+            header( $statusString, true, $statusCode);
+
         }
     }
 
-    public static function sendResponse($msjArray,$status=200)
+    public static function sendJsonParamResponse($data,$params, $status=200)
+    {
+        $out = [];
+        if($data instanceof IEntidad)
+        {
+            $data = $data->__toArray();
+        }
+        foreach($params as $param)
+        {
+            $out[$param] = $data[$param];
+        }
+        return Router::sendJsonResponse($out,$status);
+    }
+
+    public static function sendJsonResponse($data,$status=200)
     {
         self::headerStatus($status);
-        die(json_encode($msjArray, true));
+        header('Content-Type: application/json');
+        if($data instanceof IEntidad)
+        {
+         die($data->__toJson());
+        }
+        else
+        {
+         die(json_encode($data, true));
+        }
     }
+
 }
