@@ -17,3 +17,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+if(!DEBUG) {
+    $container['errorHandler'] = function ($container) {
+        return new \Core\Exceptions\Handler();
+    };
+}
