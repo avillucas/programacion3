@@ -43,13 +43,13 @@ class Langs extends EnumModel
     public static function getModificadoText(Entidad $entidad = null)
     {
 
-        return self::getName(self::MODIFICADO_OK);
+        return static::getName(self::MODIFICADO_OK);
     }
 
 
     public static function getCreadoText(Entidad $entidad = null)
     {
-        return self::getName(self::CREADO_OK);
+        return static::getName(self::CREADO_OK);
     }
 
     public static function getEliminadoText(Entidad $entidad = null)
@@ -57,8 +57,4 @@ class Langs extends EnumModel
         return self::getName(self::ELIMINADO_OK);
     }
 
-    public static function exists(string $code)
-    {
-        return (isset( self::$names[$code]));
-    }
 }

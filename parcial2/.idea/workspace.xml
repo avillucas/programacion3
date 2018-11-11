@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="153d3a85-c055-4afa-a998-a9e5c2980546" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/Api/CompraApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Compra.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Dao/AccesoDatos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Dao/IDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Dao/RegistroPeticionesDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Entidad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysForbiddenException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysNotImplementedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysValidationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Middleware/MWLog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Middleware/MWparaCORS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/.idea/comandatp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/.idea/comandatp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Api/IApiUsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Api/IApiUsable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Api/UsuarioApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Dao/IDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Dao/IDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Exceptions/SysException.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Exceptions/SysException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Middleware/AutentificadorJWT.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Middleware/AutentificadorJWT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Middleware/MWparaAutentificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Middleware/MWparaAutentificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Models/EnumModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Models/EnumModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Models/Langs.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Models/Langs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/core/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/core/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comandatp/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/src/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/clases/IO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/clases/helpers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/clases/producto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/clases/productoCollection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/datos/producto.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotos/1234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366251541234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366251851234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252021234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252031234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252991234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366253001234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366269871234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366269881234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272351234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272521234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272651234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272681234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272961234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272991234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366273001234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366273291234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366279511234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280761234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280951234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280961234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282111234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282201234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282211234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282351234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282401234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282411234564877-prod1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../producto/index.php" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1764507506">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="htaccess" value="1" />
+          <entry key="json" value="2" />
+          <entry key="php" value="62" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="2" />
+          <entry key="PHP" value="62" />
+          <entry key="htaccess" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="json" value="3" />
+          <entry key="php" value="4226" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="3" />
+          <entry key="PHP" value="4223" />
+          <entry key="SQL" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.composer.actions">
+        <counts>
+          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+              <folding>
+                <element signature="e#7#31#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>carga</find>
+      <find>inservar</find>
+      <find>caberece</find>
+      <find>TOKEN_WORD</find>
+      <find>mal</find>
+      <find>mal</find>
+      <find>La</find>
+      <find>conneccion</find>
+      <find>conecccion</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/dependencies.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/core/Api/UsuarioApi.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/core/Api/IApiUsable.php" />
+        <option value="$PROJECT_DIR$/core/Usuario.php" />
+        <option value="$PROJECT_DIR$/core/Compra.php" />
+        <option value="$PROJECT_DIR$/core/Api/CompraApi.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/MWLog.php" />
+        <option value="$PROJECT_DIR$/core/Dao/RegistroPeticionesDao.php" />
+        <option value="$PROJECT_DIR$/src/routes.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/slim/slim" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/slim/php-view" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/oscarotero/psr7-middlewares" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="parcial2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parcial2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\programacion3\parcial2\core\Api" />
+      <recent name="C:\xampp\htdocs\programacion3\parcial2\core" />
+      <recent name="C:\xampp\htdocs\programacion3\parcial2\core\Dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="153d3a85-c055-4afa-a998-a9e5c2980546" name="Default Changelist" comment="" />
+      <created>1541867591118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541867591118</updated>
+      <workItem from="1541867593034" duration="13152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13152000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.24962178" />
+      <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" visible="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="JSON Viewer" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Models/Langs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/Middleware/MWparaCORS.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dependencies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/IDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaCORS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="68" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="28" selection-end-column="68" />
+          <folding>
+            <element signature="e#227#412#0#PHP" />
+            <element signature="e#418#578#0#PHP" />
+            <element signature="e#797#1000#0#PHP" />
+            <element signature="e#1006#1258#0#PHP" />
+            <element signature="e#1264#1796#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+          <folding>
+            <element signature="e#820#1544#0#PHP" />
+            <element signature="e#1550#2415#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Entidad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/IApiUsable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding>
+            <element signature="e#27#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Compra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="85" column="65" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/CompraApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding>
+            <element signature="e#134#247#0#PHP" />
+            <element signature="e#539#822#0#PHP" />
+            <element signature="e#828#942#0#PHP" />
+            <element signature="e#948#1065#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="91" selection-start-line="91" selection-end-line="101" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="51" column="81" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="81" />
+          <folding>
+            <element signature="e#107#667#0#PHP" />
+            <element signature="e#672#993#0#PHP" />
+            <element signature="e#740#964#0#PHP" />
+            <element signature="e#845#964#0#PHP" />
+            <element signature="e#996#1168#0#PHP" />
+            <element signature="e#1174#1585#0#PHP" />
+            <element signature="e#1383#1536#0#PHP" />
+            <element signature="e#1805#1902#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/AccesoDatos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/RegistroPeticionesDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#34#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="e#7#31#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

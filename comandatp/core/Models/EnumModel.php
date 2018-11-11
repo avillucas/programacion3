@@ -27,13 +27,14 @@ abstract class EnumModel
     }
 
 
-    public static function getName(string $code)
+    public static function getName( $code)
     {
         if(!static::exists($code))
         {
             throw new SysNotFoundException('El codigo '.$code.' no existe');
         }
-        return  static::$texts[$code];
+        $names = static::getNames();
+        return  $names[$code];
     }
 
     public static function existsOFallar($code)

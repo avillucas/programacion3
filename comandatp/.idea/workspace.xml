@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6e4c2c-8ac2-4af4-9c6e-dd73cf192925" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/Api/Api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Dao/IDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysForbiddenException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysNotImplementedException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Exceptions/SysValidationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Middleware/MWparaCORS.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Models/EnumModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Models/Langs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Models/UsuarioPerfiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/comandatp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/comandatp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dependencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dependencies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Api/IApiUsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Dao/IDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/IDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Exceptions/SysException.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Exceptions/SysException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Models/EnumModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Models/EnumModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Models/Langs.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Models/Langs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../producto/clases/IO.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../producto/clases/helpers.php" beforeDir="false" />
@@ -91,25 +85,31 @@
     <session id="42399191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.78" value="1" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htaccess" value="3" />
-          <entry key="json" value="5" />
-          <entry key="php" value="123" />
+          <entry key="json" value="6" />
+          <entry key="md" value="1" />
+          <entry key="php" value="177" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="5" />
-          <entry key="PHP" value="123" />
+          <entry key="JSON" value="6" />
+          <entry key="Markdown" value="1" />
+          <entry key="PHP" value="177" />
           <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
@@ -117,14 +117,14 @@
         <counts>
           <entry key="dummy" value="3" />
           <entry key="htaccess" value="19" />
-          <entry key="json" value="16" />
-          <entry key="php" value="5859" />
+          <entry key="json" value="19" />
+          <entry key="php" value="8993" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="16" />
-          <entry key="PHP" value="5859" />
+          <entry key="JSON" value="19" />
+          <entry key="PHP" value="8993" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="htaccess" value="19" />
         </counts>
@@ -139,22 +139,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
+        <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="35" column="22" selection-start-line="27" selection-start-column="6" selection-end-line="35" selection-end-column="22" />
               <folding>
-                <element signature="e#122#165#0#PHP" expanded="true" />
+                <element signature="e#34#67#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+        <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dependencies.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -163,7 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>token</find>
       <find>FETCH_CLASS</find>
       <find>login</find>
       <find>encrip</find>
@@ -173,6 +181,12 @@
       <find>self::</find>
       <find>exists</find>
       <find>PDO</find>
+      <find>token</find>
+      <find>getPerdil</find>
+      <find>insertar</find>
+      <find>crear</find>
+      <find>actuali</find>
+      <find>invalido</find>
     </findStrings>
     <replaceStrings>
       <replace>static::</replace>
@@ -189,35 +203,35 @@
         <option value="$PROJECT_DIR$/core/AutentificadorJWT.php" />
         <option value="$PROJECT_DIR$/core/MWparaCORS.php" />
         <option value="$PROJECT_DIR$/core/IApiUsable.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/core/UsuarioApi.php" />
         <option value="$PROJECT_DIR$/core/Api/Api.php" />
-        <option value="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" />
-        <option value="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" />
-        <option value="$PROJECT_DIR$/core/Middleware/MWparaCORS.php" />
         <option value="$PROJECT_DIR$/core/IEntidad.php" />
         <option value="$PROJECT_DIR$/core/Exceptions/SysEnvValidationException.php" />
         <option value="$PROJECT_DIR$/core/Dao/UsuarioDao.php" />
-        <option value="$PROJECT_DIR$/core/Dao/IDao.php" />
-        <option value="$PROJECT_DIR$/core/Entidad.php" />
         <option value="$PROJECT_DIR$/core/Models/Responses.php" />
-        <option value="$PROJECT_DIR$/core/Api/IApiUsable.php" />
-        <option value="$PROJECT_DIR$/core/Api/UsuarioApi.php" />
         <option value="$PROJECT_DIR$/core/Exceptions/SysForbiddenException.php" />
         <option value="$PROJECT_DIR$/core/Exceptions/SysNotImplementedException.php" />
-        <option value="$PROJECT_DIR$/core/Exceptions/SysValidationException.php" />
         <option value="$PROJECT_DIR$/core/Exceptions/SysNotFoundException.php" />
-        <option value="$PROJECT_DIR$/core/Models/Langs.php" />
         <option value="$PROJECT_DIR$/core/Models/UsuarioPerfiles.php" />
-        <option value="$PROJECT_DIR$/core/Models/EnumModel.php" />
-        <option value="$PROJECT_DIR$/core/Dao/AccesoDatos.php" />
-        <option value="$PROJECT_DIR$/core/Exceptions/SysException.php" />
-        <option value="$PROJECT_DIR$/core/Exceptions/Handler.php" />
-        <option value="$PROJECT_DIR$/src/routes.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/src/dependencies.php" />
+        <option value="$PROJECT_DIR$/core/Models/Langs.php" />
+        <option value="$PROJECT_DIR$/core/Api/IApiUsable.php" />
+        <option value="$PROJECT_DIR$/core/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/core/Dao/AccesoDatos.php" />
+        <option value="$PROJECT_DIR$/core/Entidad.php" />
+        <option value="$PROJECT_DIR$/core/Dao/IDao.php" />
+        <option value="$PROJECT_DIR$/core/Models/EnumModel.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/core/Usuario.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/MWparaCORS.php" />
+        <option value="$PROJECT_DIR$/core/Exceptions/SysValidationException.php" />
+        <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/core/Api/UsuarioApi.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" />
+        <option value="$PROJECT_DIR$/core/Exceptions/SysException.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" />
       </list>
     </option>
   </component>
@@ -265,11 +279,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/oscarotero/psr7-middlewares" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="46" />
+    <option name="y" value="-475" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -279,6 +295,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,18 +306,12 @@
             <path>
               <item name="comandatp" type="b2602c69:ProjectViewProjectNode" />
               <item name="comandatp" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comandatp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comandatp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,6 +329,7 @@
       <recent name="C:\xampp\htdocs\programacion3\comandatp\core\Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\programacion3\comandatp\vendor" />
       <recent name="C:\xampp\htdocs\programacion3\comandatp\core\Exceptions" />
       <recent name="C:\xampp\htdocs\programacion3\comandatp\core" />
     </key>
@@ -353,17 +365,20 @@
       <workItem from="1540858088070" duration="3534000" />
       <workItem from="1540901726086" duration="53000" />
       <workItem from="1541362273502" duration="10415000" />
+      <workItem from="1541413852568" duration="79000" />
+      <workItem from="1541454864423" duration="6160000" />
+      <workItem from="1541462738313" duration="3979000" />
+      <workItem from="1541509765597" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17111000" />
+    <option name="totallyTimeSpent" value="27766000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-776" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -376,7 +391,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -392,16 +407,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="408">
-            <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/router.php" />
     <entry file="file://$PROJECT_DIR$/core/IJsoneable.php" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
@@ -425,106 +430,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaCORS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/IEntidad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysValidationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysOrganizationException.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysUntrustException.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/UsuarioDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/IDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding>
-            <element signature="e#121#138#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Models/Responses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="282" column="10" selection-start-line="281" selection-start-column="5" selection-end-line="282" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Entidad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysValidationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/IEntidad.php" />
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysOrganizationException.php" />
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysUntrustException.php" />
+    <entry file="file://$PROJECT_DIR$/core/Dao/UsuarioDao.php" />
+    <entry file="file://$PROJECT_DIR$/core/Models/Responses.php" />
     <entry file="file://$PROJECT_DIR$/core/Exceptions/SysNotImplementedException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -546,53 +456,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Models/Langs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Models/EnumModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/settings.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/AccesoDatos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
@@ -601,75 +466,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dependencies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="408">
+            <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Models/UsuarioPerfiles.php">
+    <entry file="file://$PROJECT_DIR$/core/Models/Langs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="208">
+          <caret line="56" column="23" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/AccesoDatos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/IDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/oscarotero/psr7-middlewares/src/Utils/Helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/ServerRequestInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="243" column="20" selection-start-line="243" selection-start-column="20" selection-end-line="243" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaCORS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#377#801#0#PHP" />
-            <element signature="e#476#530#0#PHP" />
-            <element signature="e#539#611#0#PHP" />
-            <element signature="e#620#697#0#PHP" />
-            <element signature="e#706#795#0#PHP" />
-            <element signature="e#807#936#0#PHP" />
-            <element signature="e#942#1044#0#PHP" />
-            <element signature="e#1050#1156#0#PHP" />
-            <element signature="e#1161#1348#0#PHP" />
-            <element signature="e#1354#1462#0#PHP" />
-            <element signature="e#1354#1525#0#PHP" />
-            <element signature="e#1531#1958#0#PHP" />
-            <element signature="e#1682#1805#0#PHP" />
-            <element signature="e#1814#1905#0#PHP" />
-            <element signature="e#1964#2042#0#PHP" />
-            <element signature="e#2047#2568#0#PHP" />
-            <element signature="e#2165#2301#0#PHP" />
-            <element signature="e#2574#2653#0#PHP" />
-            <element signature="e#2658#3253#0#PHP" />
-            <element signature="e#2778#2927#0#PHP" />
-            <element signature="e#3259#3327#0#PHP" />
-            <element signature="e#3332#3672#0#PHP" />
-            <element signature="e#3450#3550#0#PHP" />
-            <element signature="e#3678#4040#0#PHP" />
-            <element signature="e#3802#3932#0#PHP" />
-            <element signature="e#4046#4505#0#PHP" />
-            <element signature="e#4171#4327#0#PHP" />
-            <element signature="e#4511#4710#0#PHP" />
-            <element signature="e#4716#4795#0#PHP" />
-            <element signature="e#4800#4861#0#PHP" />
-            <element signature="e#4867#4976#0#PHP" />
-            <element signature="e#4981#5082#0#PHP" />
-            <element signature="e#5090#5230#0#PHP" />
-            <element signature="e#5235#5735#0#PHP" />
-            <element signature="e#5414#5583#0#PHP" />
-            <element signature="e#5741#5880#0#PHP" />
-            <element signature="e#5885#6548#0#PHP" />
-            <element signature="e#6090#6300#0#PHP" />
-            <element signature="e#6554#7130#0#PHP" />
-            <element signature="e#6679#6796#0#PHP" />
-            <element signature="e#6816#6966#0#PHP" />
-            <element signature="e#6975#7099#0#PHP" />
-          </folding>
+        <state relative-caret-position="185">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Models/UsuarioPerfiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Entidad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Models/EnumModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="258" column="6" selection-start-line="258" selection-start-column="6" selection-end-line="258" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Api/IApiUsable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysValidationException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="e#35#69#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -680,13 +619,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
+    <entry file="file://$PROJECT_DIR$/src/middleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="35" column="22" selection-start-line="27" selection-start-column="6" selection-end-line="35" selection-end-column="22" />
           <folding>
-            <element signature="e#122#165#0#PHP" expanded="true" />
+            <element signature="e#34#67#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dependencies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -75,11 +75,15 @@ class Usuario extends Entidad
         /** @var Usuario $usuario */
         if(isset($data['password']))
         {
-            $usuario->password = $usuario->setPassword($data['password']);
+            $usuario->setPassword($data['password']);
         }
         if(isset($data['email']))
         {
             $usuario->email = $data['email'];
+        }
+        if(isset($data['perfil']))
+        {
+            $usuario->perfil = $data['perfil'];
         }
         $usuario->save();
         return true;
@@ -93,11 +97,12 @@ class Usuario extends Entidad
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta =$objetoAccesoDato->RetornarConsulta("
-            INSERT INTO usuarios (email,password)
-            VALUES (:email,:password)
+            INSERT INTO usuarios (email,password,perfil)
+            VALUES (:email,:password,:perfil)
         ");
         $consulta->bindValue(':email',$this->email, \PDO::PARAM_STR);
-        $consulta->bindValue(':password', Usuario::encriptar($this->password), \PDO::PARAM_STR);
+        $consulta->bindValue(':password', $this->password, \PDO::PARAM_STR);
+        $consulta->bindValue(':perfil', $this->perfil, \PDO::PARAM_STR);
         $consulta->execute();
         return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
@@ -154,7 +159,7 @@ class Usuario extends Entidad
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta =$objetoAccesoDato->RetornarConsulta(
-            "SELECT id, email, password, token
+            "SELECT id, email, password, perfil 
                 FROM usuarios 
                 WHERE id = :id"
         );
@@ -166,7 +171,7 @@ class Usuario extends Entidad
 
     public function __toArray()
     {
-        return ['id' =>$this->id, 'email' =>$this->email, 'password'=>$this->password,'perfil'=>UsuarioPerfiles::getName($this->perfil),'token'=>$this->token];
+        return ['id' =>$this->id, 'email' =>$this->email, 'password'=>$this->password,'perfil'=>UsuarioPerfiles::getName($this->perfil)];
     }
 
     /**
@@ -188,8 +193,6 @@ class Usuario extends Entidad
         return md5($passwordString);
     }
 
-
-
     /**
      * Buscar un usuario por email envia un error en caso de no exista ninguno
      * @param $email
@@ -200,13 +203,13 @@ class Usuario extends Entidad
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         /** @var PDOStatement $consulta */
         $consulta =$objetoAccesoDato->RetornarConsulta("
-                SELECT id, email, password  
+                SELECT id, email, password , perfil 
                 FROM  usuarios 
                 WHERE email = :email
                ");
         $consulta->bindValue(':email',$email, \PDO::PARAM_STR);
         $consulta->execute();
-        return $consulta->fetchObject('Usuario');
+        return $consulta->fetchObject(Usuario::class);
 
     }
 
@@ -240,15 +243,17 @@ class Usuario extends Entidad
         {
             throw new SysValidationException('No existe un usuario con ese email');
         }
-        //
+       //
         if($usuario->password != Usuario::encriptar($password))
         {
             throw new SysValidationException('El password es incorrecto');
         }
-        if($usuario->perfil == $perfil)
+        if($usuario->perfil != $perfil)
         {
             throw new SysValidationException('El perfil es incorrecto');
         }
+
+
         return $usuario;
     }
 
