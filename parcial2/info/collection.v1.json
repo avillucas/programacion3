@@ -1,0 +1,462 @@
+{
+	"id": "ccd761ab-50eb-41eb-bc06-580139e36c9d",
+	"name": "PARCIAL II",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"dedd53e1-5b84-495b-ad39-d304710636a3",
+		"b5179b4a-dead-40e3-8901-fb9dca2298b9",
+		"1522b27f-dc0d-4f07-ac5a-90fb88b936d9",
+		"0aac884c-9142-43fb-836a-3f42b51a6acc"
+	],
+	"folders": [
+		{
+			"id": "dedd53e1-5b84-495b-ad39-d304710636a3",
+			"name": "ETAPA 1",
+			"description": "Ruta “usuario”(POST) , alta de usuario(nombre , clave y sexo).\r\nPerfil por defecto “usuario”.\r\nAgregar a un usuario en la base con los siguientes datos(nombre:admin, clave: admin , sexo: femenino\r\nperfil:admin).",
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9da489d0-21a4-4d69-b2cc-9fb3cb4bfb50",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c949f98-d2fb-445d-afe8-0a3044857154",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "ccd761ab-50eb-41eb-bc06-580139e36c9d",
+			"folder": null,
+			"order": [
+				"ed7041fe-8e4c-40cd-badb-da7510450d29",
+				"f98f9921-7b04-452e-98db-e058cfcf0eb4"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "b5179b4a-dead-40e3-8901-fb9dca2298b9",
+			"name": "ETAPA 2",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "ccd761ab-50eb-41eb-bc06-580139e36c9d",
+			"folder": null,
+			"order": [
+				"c9f0000e-3bc2-4e5c-bc6c-6296d70cf68e",
+				"c70f354c-5e06-44b0-97f0-88a69cb6f8a3"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "1522b27f-dc0d-4f07-ac5a-90fb88b936d9",
+			"name": "ETAPA 3",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "ccd761ab-50eb-41eb-bc06-580139e36c9d",
+			"folder": null,
+			"order": [
+				"ce327d7f-9bca-4e5a-aba1-4372eb91a1cb"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "0aac884c-9142-43fb-836a-3f42b51a6acc",
+			"name": "ETAPA 4",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"collection": "ccd761ab-50eb-41eb-bc06-580139e36c9d",
+			"folder": null,
+			"order": [
+				"a13331ea-6323-46fd-aa57-12250e885233"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "a13331ea-6323-46fd-aa57-12250e885233",
+			"name": "COMPRA IMAGEN",
+			"url": "http://localhost:8080/compra/",
+			"description": "",
+			"data": [
+				{
+					"key": "articulo",
+					"value": "PAPA",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "fecha",
+					"value": "2018-10-06",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "precio",
+					"value": "123.50",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "imagen",
+					"description": "",
+					"type": "file",
+					"enabled": true,
+					"value": ""
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY",
+					"description": "ADMIN TOKEN",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig",
+					"description": "USER TOKEN",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "0aac884c-9142-43fb-836a-3f42b51a6acc",
+			"headers": "//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig\n//Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c70f354c-5e06-44b0-97f0-88a69cb6f8a3",
+			"name": "COMPRA",
+			"url": "http://localhost:8080/compra/",
+			"description": "",
+			"data": [
+				{
+					"key": "articulo",
+					"value": "PAPA",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "fecha",
+					"value": "2018-10-06",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "precio",
+					"value": "123.50",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY",
+					"description": "ADMIN TOKEN",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE4NzM5NjgsImV4cCI6MTU0MTg3NzU2OCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjUsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.uVdzC8XMEEFG8Vv3AII0RjZaE6EWkwXnbas1N102LN8",
+					"description": "USER TOKEN",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "b5179b4a-dead-40e3-8901-fb9dca2298b9",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY\n//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE4NzM5NjgsImV4cCI6MTU0MTg3NzU2OCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjUsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.uVdzC8XMEEFG8Vv3AII0RjZaE6EWkwXnbas1N102LN8\n//Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c9f0000e-3bc2-4e5c-bc6c-6296d70cf68e",
+			"name": "TRAER TODOS",
+			"url": "http://localhost:8080/usuario/",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY",
+					"description": "ADMIN TOKEN",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig",
+					"description": "USER TOKEN",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "noauth",
+				"noauth": []
+			},
+			"events": null,
+			"folder": "b5179b4a-dead-40e3-8901-fb9dca2298b9",
+			"headers": "//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ce327d7f-9bca-4e5a-aba1-4372eb91a1cb",
+			"name": "TRAER TODOS",
+			"url": "http://localhost:8080/compra/",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY",
+					"description": "ADMIN TOKEN",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig",
+					"description": "USER TOKEN",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "noauth",
+				"noauth": []
+			},
+			"events": null,
+			"folder": "1522b27f-dc0d-4f07-ac5a-90fb88b936d9",
+			"headers": "//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDA4MTAsImV4cCI6MTU0MTkwNDQxMCwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFkbWluIiwiY2xhdmUiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsInNleG8iOiJmZW1lbmlubyIsInBlcmZpbCI6ImFkbWluIiwiaXNBZG1pbiI6dHJ1ZX0sImFwcCI6IlBBUkNJQUwgMiJ9.x96B7UBfDnj-IzpjdaQMJQ1YCvJHAU9VjblzJlu_EXY\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDE5MDQxMTEsImV4cCI6MTU0MTkwNzcxMSwiYXVkIjoiYjczZTUxMTQzZDg2Njk1YWIzMTI4ODE5YjE1ZWZiMzMyMmE1YTA5YiIsImRhdGEiOnsiaWQiOjIsIm5vbWJyZSI6InVzZXIiLCJjbGF2ZSI6ImVlMTFjYmIxOTA1MmU0MGIwN2FhYzBjYTA2MGMyM2VlIiwic2V4byI6Im1hc2N1bGlubyIsInBlcmZpbCI6InVzdWFyaW8iLCJpc0FkbWluIjpmYWxzZX0sImFwcCI6IlBBUkNJQUwgMiJ9.w0KXmM2VooBHJQ3_TJRga_r07uKqHL9pHhR57ptZ3Ig\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ed7041fe-8e4c-40cd-badb-da7510450d29",
+			"name": "CREAR",
+			"url": "http://localhost:8080/usuario/",
+			"description": "",
+			"data": [
+				{
+					"key": "nombre",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "clave",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "femenino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "perfil",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "nombre",
+					"value": "user",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "clave",
+					"value": "user",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "sexo",
+					"value": "masculino",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "dedd53e1-5b84-495b-ad39-d304710636a3",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f98f9921-7b04-452e-98db-e058cfcf0eb4",
+			"name": "LOGIN",
+			"url": "http://localhost:8080/login/",
+			"description": "",
+			"data": [
+				{
+					"key": "nombre",
+					"value": "admin",
+					"description": "ADMIN ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "clave",
+					"value": "admin",
+					"description": "ADMIN ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "sexo",
+					"value": "femenino",
+					"description": "ADMIN ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "nombre",
+					"value": "asdas",
+					"description": "ADMIN ERRONEA ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "clave",
+					"value": "asda",
+					"description": "ADMIN ERRONEA ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "sexo",
+					"value": "asdasasd",
+					"description": "ADMIN ERRONEA ",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "nombre",
+					"value": "user",
+					"description": "USUARIO",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "clave",
+					"value": "user",
+					"description": "USUARIO",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "masculino",
+					"description": "USUARIO",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "dedd53e1-5b84-495b-ad39-d304710636a3",
+			"headers": "//Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		}
+	]
+}

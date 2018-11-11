@@ -3,6 +3,7 @@ namespace Core\Api;
 
 use Core\Compra;
 use Core\Exceptions\SysNotImplementedException;
+use Core\IO\IO;
 
 class CompraApi extends IApiUsable
 {
@@ -22,7 +23,12 @@ class CompraApi extends IApiUsable
     {
         $data = $this->getParams($request);
         $data['usuarioId'] = $this->getUsuarioActual($request)->getId();
-        Compra::crear($data );
+        $fileData  = $this->traerUnArchivo($request, 'imagen');
+        $compra = Compra::crear($data);
+        $nombreImagen = IO::subirArchivo($fileData,Compra::IMAGEN_DIRECTORIO,Compra::generarNombreImagen($compra));
+        $compra->setImagen($nombreImagen);
+        $compra->save();
+        //
         return $response->withJson(IApiUsable::RESPUESTA_CREADO,200);
     }
 
@@ -35,6 +41,4 @@ class CompraApi extends IApiUsable
     {
         throw  new SysNotImplementedException();
     }
-
-
 }

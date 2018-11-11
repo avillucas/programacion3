@@ -1,7 +1,8 @@
 <?php
 //
 define('JWT_SECRET','arsgtwe');
-define('DEBUG',true);
+define('DEBUG',false);
+
 //
 define('API_NAME','PARCIAL 2');
 //

@@ -1,16 +1,15 @@
 <?php
 namespace Core\Api;
 
+use Core\IO\IO;
 use Core\Middleware\AutentificadorJWT;
 use Core\Usuario;
 use Slim\Http\Request;
+use Slim\Http\UploadedFile;
 
 abstract class IApiUsable{
 
     const RESPUESTA_CREADO = 'creado correctamente';
-    const RESPUESTA_MODIFICADO = 'modificado correctamente';
-    const RESPUESTA_ELIMINADO = 'eliminado correctamente';
-
 
     public function getParams($request)
     {
@@ -34,7 +33,22 @@ abstract class IApiUsable{
         return $usuario;
     }
 
-   	abstract public function TraerUno($request, $response, $args);
+    /**
+     * @param Request $request
+     * @param $varName
+     * @return UploadedFile
+     * @throws \Exception
+     */
+    protected function traerUnArchivo(Request $request, $variable,$requerido= false)
+    {
+        $files = $request->getUploadedFiles();
+        if($requerido && !isset($files[$variable]))
+        {
+            throw new \Exception("No fue enviado el archivo ".$variable." en la peticion");
+        }
+        return $files[$variable];
+    }
+    abstract public function TraerUno($request, $response, $args);
     abstract public function TraerTodos($request, $response, $args);
     abstract public function CargarUno($request, $response, $args);
     abstract public function BorrarUno($request, $response, $args);

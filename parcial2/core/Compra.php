@@ -10,13 +10,16 @@ use Slim\Exception\NotFoundException;
 
 class Compra extends Entidad
 {
+    const IMAGEN_DIRECTORIO = 'IMGCompras';
+
     public $id = null;
     public $articulo;
     public $fecha;
     public $precio;
     public $usuarioId;
+    public $imagen;
 
-    public function __construct($id=null, $articulo=null, $fecha=null, $precio=null, $usuarioId=null )
+    public function __construct($id=null, $articulo=null, $fecha=null, $precio=null, $usuarioId=null,$imagen=null )
     {
         if(isset($id)){
             $this->id = $id;
@@ -37,6 +40,10 @@ class Compra extends Entidad
         {
             $this->usuarioId = $usuarioId;
         }
+        if(isset($imagen))
+        {
+            $this->imagen = $imagen;
+        }
     }
 
     private function setPrecio($precio)
@@ -56,7 +63,7 @@ class Compra extends Entidad
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         /** @var \PDOStatement $consulta */
         $consulta =$objetoAccesoDato->RetornarConsulta("
-            INSERT INTO compras (fecha,articulo,precio,usuario_id AS usuarioId)
+            INSERT INTO compras (fecha,articulo,precio,usuario_id)
             VALUES (:fecha,:articulo,:precio,:usuario_id)
         ");
         $consulta->bindValue(':fecha',$this->fecha, \PDO::PARAM_STR);
@@ -67,23 +74,43 @@ class Compra extends Entidad
         return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
 
-    public static function traerTodos()
+    protected function actualizar()
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta =$objetoAccesoDato->RetornarConsulta(
-            " SELECT  c.id, c.fecha , c.articulo, c.precio, u.nombre ,u.id AS usuarioId
+        /** @var \PDOStatement $consulta */
+        $consulta =$objetoAccesoDato->RetornarConsulta("
+            UPDATE compras  SET 
+             fecha = :fecha,
+             articulo = :articulo,
+             precio = :precio,
+             usuario_id = :usuario_id,
+             imagen = :imagen
+            WHERE id = :id
+        ");
+        $consulta->bindValue(':fecha',$this->fecha, \PDO::PARAM_STR);
+        $consulta->bindValue(':articulo', $this->articulo, \PDO::PARAM_STR);
+        $consulta->bindValue(':precio', $this->precio, \PDO::PARAM_STR);
+        $consulta->bindValue(':usuario_id', $this->usuarioId, \PDO::PARAM_INT);
+        $consulta->bindValue(':imagen', $this->imagen, \PDO::PARAM_STR);
+        $consulta->bindValue(':id',$this->id, \PDO::PARAM_INT);
+        return $consulta->execute();
+    }
+
+    public static function traerTodos()
+    {
+       $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+       $consulta =$objetoAccesoDato->RetornarConsulta(" SELECT  c.id, c.fecha , c.articulo, c.precio, u.nombre ,u.id AS usuarioId , c.imagen
                 FROM  compras AS c
-                JOIN usuarios AS u ON c.usuario_id = c.id"
-        );
-        $consulta->execute();
-        return $consulta->fetchAll(\PDO::FETCH_CLASS, Compra::class);
+                JOIN usuarios AS u ON c.usuario_id = u.id");
+       $consulta->execute();
+       return $consulta->fetchAll(\PDO::FETCH_CLASS, Compra::class);
     }
 
     public static function traerTodosParaElUsuario($usuarioId)
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta =$objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, fecha , articulo, precio, usuario_id AS usuarioId
+            " SELECT  id, fecha , articulo, precio, usuario_id AS usuarioId, imagen
                 FROM  compras
                 WHERE usuario_id = :usuario_id"
         );
@@ -108,7 +135,7 @@ class Compra extends Entidad
 
     public function __toArray()
     {
-        return ['id' =>$this->id, 'fecha' =>$this->fecha, 'articulo'=>$this->articulo,'precio'=>$this->precio];
+        return ['id' =>$this->id, 'fecha' =>$this->fecha, 'articulo'=>$this->articulo,'precio'=>$this->precio,'imagen'=>$this->getImagenName()];
     }
 
     public function getId()
@@ -126,14 +153,23 @@ class Compra extends Entidad
         throw  new SysNotImplementedException();
     }
 
-    protected function actualizar()
-    {
-        throw  new SysNotImplementedException();
-    }
-
     protected function eliminar()
     {
         throw  new SysNotImplementedException();
     }
 
+    public static function generarNombreImagen(Compra $compra)
+    {
+        return $compra->id.'-'.$compra->articulo;
+    }
+
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+    }
 }
