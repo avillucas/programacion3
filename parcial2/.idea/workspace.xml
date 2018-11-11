@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="153d3a85-c055-4afa-a998-a9e5c2980546" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/IO/IO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Middleware/MWRutas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/CompraApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/CompraApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/IApiUsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Compra.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Compra.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="3" />
-          <entry key="php" value="8864" />
+          <entry key="php" value="8877" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="8855" />
+          <entry key="PHP" value="8868" />
           <entry key="SQL" value="9" />
         </counts>
       </usages-collector>
@@ -84,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="204">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -255,12 +246,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541867591118</updated>
-      <workItem from="1541867593034" duration="22318000" />
+      <workItem from="1541867593034" duration="22439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22318000" />
+    <option name="totallyTimeSpent" value="22439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -524,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="204">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
