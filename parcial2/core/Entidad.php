@@ -1,9 +1,10 @@
 <?php
 namespace Core;
 
+
 use Core\Dao\IDao;
 
-abstract class Entidad extends IDao
+abstract class Entidad implements IDao
 {
     /**
      * Crea la entidad y agrega a la base
@@ -27,18 +28,6 @@ abstract class Entidad extends IDao
      */
     abstract static function borrar($id);
 
-    /**
-     * Crea/Modifica la entidad en su persistencia
-     */
-    public function save()
-    {
-        if(isset($this->id)){
-            $this->actualizar();
-            return ;
-        }
-        $this->id =  $this->insertar();
-        return ;
-    }
 
     /**
      * Retorna una version en array de la entidad

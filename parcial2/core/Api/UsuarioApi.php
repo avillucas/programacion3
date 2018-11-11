@@ -1,8 +1,8 @@
 <?php
 namespace Core\Api;
 
+use Core\Dao\UsuarioDao;
 use Core\Exceptions\SysNotImplementedException;
-use Core\Exceptions\SysValidationException;
 use Core\Middleware\AutentificadorJWT;
 use Core\Models\Langs;
 use Core\Models\UsuarioPerfiles;

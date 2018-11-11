@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2018 a las 02:40:05
+-- Tiempo de generación: 11-11-2018 a las 04:56:55
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -88,7 +88,7 @@ ALTER TABLE `registro_peticiones`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `un_solo_nombre` (`nombre`(1));
+  ADD UNIQUE KEY `solo_un_nombre` (`nombre`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas

@@ -2,6 +2,7 @@
 namespace Core;
 
 use Core\Dao\AccesoDatos;
+use Core\Dao\CompraDao;
 use Core\Exceptions\SysNotFoundException;
 use Core\Exceptions\SysNotImplementedException;
 use Core\Exceptions\SysValidationException;
@@ -12,11 +13,17 @@ class Compra extends Entidad
 {
     const IMAGEN_DIRECTORIO = 'IMGCompras';
 
+    /** @var int $id */
     public $id = null;
+    /** @var string $articulo  */
     public $articulo;
+    /** @var string $fecha  */
     public $fecha;
+    /** @var float $precio  */
     public $precio;
+    /** @var int $usuarioId  */
     public $usuarioId;
+    /** @var string $imagen  */
     public $imagen;
 
     public function __construct($id=null, $articulo=null, $fecha=null, $precio=null, $usuarioId=null,$imagen=null )
@@ -58,89 +65,9 @@ class Compra extends Entidad
         return $compra;
     }
 
-    protected function insertar()
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        /** @var \PDOStatement $consulta */
-        $consulta =$objetoAccesoDato->RetornarConsulta("
-            INSERT INTO compras (fecha,articulo,precio,usuario_id)
-            VALUES (:fecha,:articulo,:precio,:usuario_id)
-        ");
-        $consulta->bindValue(':fecha',$this->fecha, \PDO::PARAM_STR);
-        $consulta->bindValue(':articulo', $this->articulo, \PDO::PARAM_STR);
-        $consulta->bindValue(':precio', $this->precio, \PDO::PARAM_STR);
-        $consulta->bindValue(':usuario_id', $this->usuarioId, \PDO::PARAM_INT);
-        $consulta->execute();
-        return $objetoAccesoDato->RetornarUltimoIdInsertado();
-    }
-
-    protected function actualizar()
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        /** @var \PDOStatement $consulta */
-        $consulta =$objetoAccesoDato->RetornarConsulta("
-            UPDATE compras  SET 
-             fecha = :fecha,
-             articulo = :articulo,
-             precio = :precio,
-             usuario_id = :usuario_id,
-             imagen = :imagen
-            WHERE id = :id
-        ");
-        $consulta->bindValue(':fecha',$this->fecha, \PDO::PARAM_STR);
-        $consulta->bindValue(':articulo', $this->articulo, \PDO::PARAM_STR);
-        $consulta->bindValue(':precio', $this->precio, \PDO::PARAM_STR);
-        $consulta->bindValue(':usuario_id', $this->usuarioId, \PDO::PARAM_INT);
-        $consulta->bindValue(':imagen', $this->imagen, \PDO::PARAM_STR);
-        $consulta->bindValue(':id',$this->id, \PDO::PARAM_INT);
-        return $consulta->execute();
-    }
-
-    public static function traerTodos()
-    {
-       $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-       $consulta =$objetoAccesoDato->RetornarConsulta(" SELECT  c.id, c.fecha , c.articulo, c.precio, u.nombre ,u.id AS usuarioId , c.imagen
-                FROM  compras AS c
-                JOIN usuarios AS u ON c.usuario_id = u.id");
-       $consulta->execute();
-       return $consulta->fetchAll(\PDO::FETCH_CLASS, Compra::class);
-    }
-
-    public static function traerTodosParaElUsuario($usuarioId)
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta =$objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, fecha , articulo, precio, usuario_id AS usuarioId, imagen
-                FROM  compras
-                WHERE usuario_id = :usuario_id"
-        );
-        $consulta->bindValue(':usuario_id', $usuarioId, \PDO::PARAM_INT);
-        $consulta->execute();
-        return $consulta->fetchAll(\PDO::FETCH_CLASS, Compra::class);
-    }
-
-    public static function traerUno($id)
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta =$objetoAccesoDato->RetornarConsulta(
-            "SELECT id, nombre, clave, sexo, perfil 
-                FROM usuarios 
-                WHERE id = :id"
-        );
-        $consulta->bindValue(':id',$id,\PDO::PARAM_INT);
-        $consulta->execute();
-        $usuario = $consulta->fetchObject(Compra::class);
-        return $usuario;
-    }
-
     public function __toArray()
     {
         return ['id' =>$this->id, 'fecha' =>$this->fecha, 'articulo'=>$this->articulo,'precio'=>$this->precio,'imagen'=>$this->getImagenName()];
-    }
-
-    public function getId()
-    {
-        return $this->id;
     }
 
     static function modificar($id, $data)
@@ -153,9 +80,14 @@ class Compra extends Entidad
         throw  new SysNotImplementedException();
     }
 
-    protected function eliminar()
+    public function save()
     {
-        throw  new SysNotImplementedException();
+        if(isset($this->id)){
+            CompraDao::actualizar($this);
+            return ;
+        }
+        $this->id =  CompraDao::insertar($this);
+        return ;
     }
 
     public static function generarNombreImagen(Compra $compra)
@@ -172,4 +104,42 @@ class Compra extends Entidad
     {
         $this->imagen = $imagen;
     }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getArticulo()
+    {
+        return $this->articulo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUsuarioId()
+    {
+        return $this->usuarioId;
+    }
+
 }

@@ -17,6 +17,11 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+/**
+$container['validator'] = function () {
+    return new Awurth\SlimValidation\Validator();
+};
+ * **/
 if(!defined('DEBUG') || !DEBUG ) {
     $container['errorHandler'] = function ($container) {
         return new \Core\Exceptions\Handler();

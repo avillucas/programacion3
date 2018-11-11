@@ -2,6 +2,7 @@
 namespace Core;
 
 use Core\Dao\AccesoDatos;
+use Core\Dao\UsuarioDao;
 use Core\Exceptions\SysNotFoundException;
 use Core\Exceptions\SysValidationException;
 use Core\Models\UsuarioPerfiles;
@@ -13,10 +14,15 @@ class Usuario extends Entidad
     const PERFIL_USUARIO = 'usuario';
     const PERFIL_ADMINISTRADOR = 'admin';
 
+    /** @var int $id */
     public $id = null;
+    /** @var string $nombre  */
     public $nombre;
+    /** @var string $clave  */
     public $clave;
+    /** @var string $sexo  */
     public $sexo;
+    /** @var string $perfil  */
     public $perfil;
 
     public function __construct($id = null, $nombre = null, $strClave = null, $sexo = null, $perfil = null)
@@ -87,85 +93,19 @@ class Usuario extends Entidad
         return true;
     }
 
-    protected function insertar()
+    public function save()
     {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta = $objetoAccesoDato->RetornarConsulta("
-            INSERT INTO usuarios (nombre,clave,sexo,perfil)
-            VALUES (:nombre,:clave,:sexo,:perfil)
-        ");
-        $consulta->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-        $consulta->bindValue(':clave', $this->clave, \PDO::PARAM_STR);
-        $consulta->bindValue(':sexo', $this->sexo, \PDO::PARAM_STR);
-        $consulta->bindValue(':perfil', $this->perfil, \PDO::PARAM_STR);
-        $consulta->execute();
-        return $objetoAccesoDato->RetornarUltimoIdInsertado();
-    }
-
-    protected function actualizar()
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta = $objetoAccesoDato->RetornarConsulta("
-				UPDATE usuarios 
-				SET nombre = :nombre,
-				clave=:clave,
-				sexo=:sexo,
-				perfil=:perfil			
-				WHERE id = :id");
-        $consulta->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-        $consulta->bindValue(':clave', $this->clave, \PDO::PARAM_STR);
-        $consulta->bindValue(':sexo', $this->sexo, \PDO::PARAM_STR);
-        $consulta->bindValue(':perfil', $this->perfil, \PDO::PARAM_STR);
-        $consulta->bindValue(':id', $this->id, \PDO::PARAM_INT);
-        return $consulta->execute();
-    }
-
-    protected function eliminar()
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta = $objetoAccesoDato->RetornarConsulta("
-				DELETE 
-				FROM usuarios 				
-				WHERE id=:id
-        ");
-        $consulta->bindValue(':id', $this->id, \PDO::PARAM_INT);
-        $consulta->execute();
-        return true;
-    }
-
-    public static function traerTodos()
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta = $objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, nombre , clave, sexo, perfil
-                FROM  usuarios"
-        );
-        $consulta->execute();
-        return $consulta->fetchAll(\PDO::FETCH_CLASS, Usuario::class);
-    }
-
-    public static function traerUno($id)
-    {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta = $objetoAccesoDato->RetornarConsulta(
-            "SELECT id, nombre, clave, sexo, perfil 
-                FROM usuarios 
-                WHERE id = :id"
-        );
-        $consulta->bindValue(':id', $id, \PDO::PARAM_INT);
-        $consulta->execute();
-        $usuario = $consulta->fetchObject(Usuario::class);
-        return $usuario;
+        if(isset($this->id)){
+            UsuarioDao::actualizar($this);
+            return ;
+        }
+        $this->id =  UsuarioDao::insertar($this);
+        return ;
     }
 
     public function __toArray()
     {
         return ['id' => $this->id, 'nombre' => $this->nombre, 'clave' => $this->clave, 'sexo' => $this->sexo, 'perfil' => $this->perfil];
-    }
-
-    public function getId()
-    {
-        return $this->id;
     }
 
     protected static function encriptar($passwordString)
@@ -215,4 +155,43 @@ class Usuario extends Entidad
         return boolval($this->perfil == Usuario::PERFIL_ADMINISTRADOR);
     }
 
+    /**
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @return string
+     */
+    public function getClave()
+    {
+        return $this->clave;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSexo()
+    {
+        return $this->sexo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPerfil()
+    {
+        return $this->perfil;
+    }
 }
