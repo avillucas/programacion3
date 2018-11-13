@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2018 a las 04:56:55
+-- Tiempo de generación: 13-11-2018 a las 01:17:00
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -32,7 +32,8 @@ CREATE TABLE `compras` (
   `id` int(10) UNSIGNED NOT NULL,
   `usuario_id` int(10) UNSIGNED NOT NULL,
   `fecha` date NOT NULL,
-  `articulo` varchar(255) NOT NULL,
+  `marca` varchar(255) NOT NULL,
+  `modelo` varchar(255) NOT NULL,
   `imagen` varchar(255) DEFAULT NULL,
   `precio` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -59,10 +60,9 @@ CREATE TABLE `registro_peticiones` (
 
 CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
-  `nombre` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `clave` char(32) NOT NULL,
-  `sexo` varchar(255) NOT NULL,
-  `perfil` enum('usuario','admin') DEFAULT 'usuario'
+  `perfil` enum('user','admin') DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -88,7 +88,7 @@ ALTER TABLE `registro_peticiones`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `solo_un_nombre` (`nombre`) USING BTREE;
+  ADD UNIQUE KEY `solo_un_nombre` (`email`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas

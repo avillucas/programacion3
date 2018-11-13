@@ -1,13 +1,9 @@
 <?php
 namespace Core;
 
-use Core\Dao\AccesoDatos;
 use Core\Dao\CompraDao;
-use Core\Exceptions\SysNotFoundException;
 use Core\Exceptions\SysNotImplementedException;
-use Core\Exceptions\SysValidationException;
 use Core\Models\UsuarioPerfiles;
-use Slim\Exception\NotFoundException;
 
 class Compra extends Entidad
 {
@@ -15,8 +11,10 @@ class Compra extends Entidad
 
     /** @var int $id */
     public $id = null;
-    /** @var string $articulo  */
-    public $articulo;
+    /** @var string $marca  */
+    public $marca;
+    /** @var string $modelo  */
+    public $modelo;
     /** @var string $fecha  */
     public $fecha;
     /** @var float $precio  */
@@ -26,14 +24,18 @@ class Compra extends Entidad
     /** @var string $imagen  */
     public $imagen;
 
-    public function __construct($id=null, $articulo=null, $fecha=null, $precio=null, $usuarioId=null,$imagen=null )
+    public function __construct($id=null, $marca=null,$modelo=null, $fecha=null, $precio=null, $usuarioId=null,$imagen=null )
     {
         if(isset($id)){
             $this->id = $id;
         }
-        if(isset($articulo))
+        if(isset($marca))
         {
-            $this->articulo = $articulo;
+            $this->marca = $marca;
+        }
+        if(isset($modelo))
+        {
+            $this->modelo = $modelo;
         }
         if(isset($fecha))
         {
@@ -60,14 +62,14 @@ class Compra extends Entidad
 
     public static function crear($data)
     {
-        $compra = new Compra(null,$data['articulo'], $data['fecha'], $data['precio'], $data['usuarioId']);
+        $compra = new Compra(null,$data['marca'],$data['modelo'], $data['fecha'], $data['precio'], $data['usuarioId']);
         $compra->save();
         return $compra;
     }
 
     public function __toArray()
     {
-        return ['id' =>$this->id, 'fecha' =>$this->fecha, 'articulo'=>$this->articulo,'precio'=>$this->precio,'imagen'=>$this->getImagenName()];
+        return ['id' =>$this->id, 'fecha' =>$this->fecha,'marca'=>$this->marca,'modelo'=>$this->modelo,'precio'=>$this->precio,'imagen'=>$this->getImagenName()];
     }
 
     static function modificar($id, $data)
@@ -92,7 +94,7 @@ class Compra extends Entidad
 
     public static function generarNombreImagen(Compra $compra)
     {
-        return $compra->id.'-'.$compra->articulo;
+        return $compra->id.'-'.$compra->marca;
     }
 
     public function getImagen()
@@ -113,9 +115,17 @@ class Compra extends Entidad
     /**
      * @return string
      */
-    public function getArticulo()
+    public function getMarca()
     {
-        return $this->articulo;
+        return $this->marca;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModelo()
+    {
+        return $this->modelo;
     }
 
     /**

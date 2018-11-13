@@ -21,12 +21,20 @@ $app->group('/', function () {
     $this->group('compra', function () {
         $this->post('/', CompraApi::class . ':cargarUno')
             ->add(MWparaAutentificar::class .':verificarUsuario');
+        $this->get('/marca', CompraApi::class . ':traerPorMarca')
+            ->add(MWparaAutentificar::class .':verificarUsuarioAdministrador');
+
         $this->get('/', CompraApi::class . ':traerTodos')
             ->add(MWparaAutentificar::class .':verificarUsuario')
             ->add(\Core\Middleware\MWRutas::class .':agregarUrlImagenDeCompra')
         ;
     })->add(\Core\Middleware\MWLog::class .':guardarPeticion')
     ;
+    $this->get('productos', CompraApi::class . ':traerProductos')
+        ->add(MWparaAutentificar::class .':verificarUsuario')
+        ->add(\Core\Middleware\MWLog::class .':guardarPeticion')
+    ;
+
 })
 ->add(\Core\Middleware\MWparaCORS::class .':HabilitarCORSTodos')
 ;

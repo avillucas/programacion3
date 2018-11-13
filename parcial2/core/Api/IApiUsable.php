@@ -28,7 +28,7 @@ abstract class IApiUsable{
     protected function getUsuarioActual(Request $request)
     {
         $data =   AutentificadorJWT::obtenerPayLoadDelRequest($request);
-        $usuario =  new Usuario($data->id,$data->nombre,null,$data->sexo,$data->perfil);
+        $usuario =  new Usuario($data->id,$data->email,null,$data->perfil);
         $usuario->setClaveEncriptada($data->clave);
         return $usuario;
     }

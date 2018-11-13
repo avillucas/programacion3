@@ -3,55 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="af6e4c2c-8ac2-4af4-9c6e-dd73cf192925" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/comandatp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/comandatp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/IApiUsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/IDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/IDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Exceptions/SysException.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Exceptions/SysException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Models/EnumModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Models/EnumModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Models/Langs.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Models/Langs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/clases/IO.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/clases/helpers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/clases/producto.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/clases/productoCollection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/datos/producto.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotos/1234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366251541234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366251851234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252021234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252031234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366252991234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366253001234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366269871234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366269881234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272351234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272521234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272651234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272681234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272961234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366272991234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366273001234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366273291234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366279511234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280761234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280951234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366280961234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282111234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282201234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282211234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282351234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282401234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/fotosbkp/15366282411234564877-prod1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../producto/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/.idea/parcial2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/.idea/parcial2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/core/Api/UsuarioApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parcial2/src/dependencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/src/dependencies.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,16 +44,17 @@
     <session id="42399191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.78" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,38 +97,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="35" column="22" selection-start-line="27" selection-start-column="6" selection-end-line="35" selection-end-column="22" />
-              <folding>
-                <element signature="e#34#67#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/Exceptions/Handler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dependencies.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -284,8 +213,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="-475" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -295,7 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,15 +231,11 @@
               <item name="comandatp" type="b2602c69:ProjectViewProjectNode" />
               <item name="comandatp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="comandatp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comandatp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,16 +293,17 @@
       <workItem from="1541454864423" duration="6160000" />
       <workItem from="1541462738313" duration="3979000" />
       <workItem from="1541509765597" duration="437000" />
+      <workItem from="1541906398522" duration="127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27766000" />
+    <option name="totallyTimeSpent" value="27893000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-776" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30332828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -391,7 +316,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -626,13 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
+    <entry file="file://$PROJECT_DIR$/src/dependencies.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="22" selection-start-line="27" selection-start-column="6" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="e#34#67#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -643,10 +565,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dependencies.php">
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="35" column="22" selection-start-line="27" selection-start-column="6" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="e#34#67#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,3 +25,14 @@ Run this command in the application directory to run the test suite
 	php composer.phar test
 
 That's it! Now go build something cool.
+
+#SETUP 
+* composer intall 
+* Importar base de datos /info/parcial2.sql
+* Configurar el archivo config.php con los datos de coneccion de la base 
+
+#RUN 
+* composer start 
+#TEST
+* info/collection.v1.json  => con Postman V1
+* info/collection.v2.json  => con Postman V2  

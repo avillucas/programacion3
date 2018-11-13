@@ -12,12 +12,11 @@ class UsuarioDao extends Dao
         /** @var Usuario $entidad */
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta = $objetoAccesoDato->RetornarConsulta("
-            INSERT INTO usuarios (nombre,clave,sexo,perfil)
-            VALUES (:nombre,:clave,:sexo,:perfil)
+            INSERT INTO usuarios (email,clave,perfil)
+            VALUES (:email,:clave,:perfil)
         ");
-        $consulta->bindValue(':nombre', $entidad->getNombre(), \PDO::PARAM_STR);
+        $consulta->bindValue(':email', $entidad->getEmail(), \PDO::PARAM_STR);
         $consulta->bindValue(':clave', $entidad->getClave(), \PDO::PARAM_STR);
-        $consulta->bindValue(':sexo', $entidad->getSexo(), \PDO::PARAM_STR);
         $consulta->bindValue(':perfil', $entidad->getPerfil(), \PDO::PARAM_STR);
         $consulta->execute();
         return $objetoAccesoDato->RetornarUltimoIdInsertado();
@@ -29,14 +28,12 @@ class UsuarioDao extends Dao
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta = $objetoAccesoDato->RetornarConsulta("
 				UPDATE usuarios 
-				SET nombre = :nombre,
-				clave=:clave,
-				sexo=:sexo,
+				SET email = :email,
+				clave=:clave,				
 				perfil=:perfil			
 				WHERE id = :id");
-        $consulta->bindValue(':nombre', $entidad->getNombre(), \PDO::PARAM_STR);
+        $consulta->bindValue(':email', $entidad->getEmail(), \PDO::PARAM_STR);
         $consulta->bindValue(':clave', $entidad->getClave(), \PDO::PARAM_STR);
-        $consulta->bindValue(':sexo', $entidad->getSexo(), \PDO::PARAM_STR);
         $consulta->bindValue(':perfil', $entidad->getPerfil(), \PDO::PARAM_STR);
         $consulta->bindValue(':id', $entidad->getId(), \PDO::PARAM_INT);
         return $consulta->execute();
@@ -60,7 +57,7 @@ class UsuarioDao extends Dao
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta = $objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, nombre , clave, sexo, perfil
+            " SELECT  id, email , clave,  perfil
                 FROM  usuarios"
         );
         $consulta->execute();
@@ -71,7 +68,7 @@ class UsuarioDao extends Dao
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta = $objetoAccesoDato->RetornarConsulta(
-            "SELECT id, nombre, clave, sexo, perfil 
+            "SELECT id, email, clave,  perfil 
                 FROM usuarios 
                 WHERE id = :id"
         );

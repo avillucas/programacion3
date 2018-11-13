@@ -19,10 +19,9 @@ class UsuarioApi extends IApiUsable
 
     public function login($request, $response, $args)
     {
-        $nombre = $this->getParam($request,'nombre');
+        $email = $this->getParam($request,'email');
         $clave = $this->getParam($request,'clave');
-        $sexo = $this->getParam($request,'sexo');
-        $usuario = Usuario::login($nombre, $clave, $sexo);
+        $usuario = Usuario::login($email, $clave);
         //TOKEN
         $data = $usuario->__toArray();
         $data['isAdmin'] = boolval($usuario->perfil == Usuario::PERFIL_ADMINISTRADOR);
@@ -37,7 +36,7 @@ class UsuarioApi extends IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
-        $usuarios= Usuario::traerTodos();
+        $usuarios= UsuarioDao::traerTodos();
         return $response->withJson($usuarios, 200);
     }
 

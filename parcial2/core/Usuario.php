@@ -11,33 +11,28 @@ use Slim\Exception\NotFoundException;
 class Usuario extends Entidad
 {
 
-    const PERFIL_USUARIO = 'usuario';
+    const PERFIL_USUARIO = 'user';
     const PERFIL_ADMINISTRADOR = 'admin';
 
     /** @var int $id */
     public $id = null;
-    /** @var string $nombre  */
-    public $nombre;
+    /** @var string $email  */
+    public $email;
     /** @var string $clave  */
     public $clave;
-    /** @var string $sexo  */
-    public $sexo;
     /** @var string $perfil  */
     public $perfil;
 
-    public function __construct($id = null, $nombre = null, $strClave = null, $sexo = null, $perfil = null)
+    public function __construct($id = null, $email = null, $strClave = null,  $perfil = null)
     {
         if (isset($id)) {
             $this->id = $id;
         }
-        if (isset($nombre)) {
-            $this->nombre = $nombre;
+        if (isset($email)) {
+            $this->email = $email;
         }
         if (isset($strClave)) {
             $this->setClave($strClave);
-        }
-        if (isset($sexo)) {
-            $this->sexo = $sexo;
         }
         if (isset($perfil)) {
             $this->setPerfil($perfil);
@@ -47,7 +42,7 @@ class Usuario extends Entidad
     private function setPerfil($perfil)
     {
         if (!in_array($perfil, [Usuario::PERFIL_ADMINISTRADOR, Usuario::PERFIL_USUARIO])) {
-            throw  new NotFoundException("no existe un perfil " . $perfil);
+            throw  new SysNotFoundException("no existe un perfil " . $perfil);
         }
         $this->perfil = $perfil;
     }
@@ -60,7 +55,7 @@ class Usuario extends Entidad
     public static function crear($data)
     {
         $perfil = (!isset($data['perfil'])) ? Usuario::PERFIL_USUARIO : $data['perfil'];
-        $usuario = new Usuario(null, $data['nombre'], $data['clave'], $data['sexo'], $perfil);
+        $usuario = new Usuario(null, $data['email'], $data['clave'], $perfil);
         $usuario->save();
         return $usuario;
     }
@@ -77,14 +72,11 @@ class Usuario extends Entidad
     {
         $usuario = Usuario::traerOFallar(intval($id));
         /** @var Usuario $usuario */
-        if (isset($data['nombre'])) {
-            $usuario->nombre = $data['nombre'];
+        if (isset($data['email'])) {
+            $usuario->email = $data['email'];
         }
         if (isset($data['clave'])) {
             $usuario->setClave($data['clave']);
-        }
-        if (isset($data['sexo'])) {
-            $usuario->sexo = $data['sexo'];
         }
         if (isset($data['perfil'])) {
             $usuario->setPerfil($data['perfil']);
@@ -105,7 +97,7 @@ class Usuario extends Entidad
 
     public function __toArray()
     {
-        return ['id' => $this->id, 'nombre' => $this->nombre, 'clave' => $this->clave, 'sexo' => $this->sexo, 'perfil' => $this->perfil];
+        return ['id' => $this->id, 'email' => $this->email, 'clave' => $this->clave, 'perfil' => $this->perfil];
     }
 
     protected static function encriptar($passwordString)
@@ -113,34 +105,30 @@ class Usuario extends Entidad
         return md5($passwordString);
     }
 
-    public static function traerUnoPorNombre($nombre)
+    public static function traerUnoPorEmail($email)
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         /** @var PDOStatement $consulta */
         $consulta = $objetoAccesoDato->RetornarConsulta("
-                SELECT id, nombre, clave, sexo , perfil 
+                SELECT id, email, clave,  perfil 
                 FROM  usuarios 
-                WHERE nombre = :nombre
+                WHERE email = :email
                ");
-        $consulta->bindValue(':nombre', $nombre, \PDO::PARAM_STR);
+        $consulta->bindValue(':email', $email, \PDO::PARAM_STR);
         $consulta->execute();
         return $consulta->fetchObject(Usuario::class);
 
     }
 
-    public static function login($nombre, $clave, $sexo)
+    public static function login($email, $clave)
     {
-        $usuario = Usuario::traerUnoPorNombre($nombre);
+        $usuario = Usuario::traerUnoPorEmail($email);
         if (!$usuario) {
-            throw new SysValidationException('No existe un usuario con ese nombre');
+            throw new SysValidationException('No existe un usuario con ese email');
         }
         //
         if ($usuario->clave != Usuario::encriptar($clave)) {
             throw new SysValidationException('La clave es incorrecta');
-        }
-
-        if ($usuario->sexo != $sexo) {
-            throw new SysValidationException('El sexo es incorrecto');
         }
         return $usuario;
     }
@@ -166,9 +154,9 @@ class Usuario extends Entidad
     /**
      * @return string
      */
-    public function getNombre()
+    public function getEmail()
     {
-        return $this->nombre;
+        return $this->email;
     }
 
     /**
@@ -177,14 +165,6 @@ class Usuario extends Entidad
     public function getClave()
     {
         return $this->clave;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSexo()
-    {
-        return $this->sexo;
     }
 
     /**

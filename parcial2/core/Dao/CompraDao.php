@@ -5,6 +5,7 @@ namespace Core\Dao;
 
 use Core\Compra;
 use Core\Entidad;
+use Core\Exceptions\SysNotImplementedException;
 
 class CompraDao extends Dao
 {
@@ -14,11 +15,12 @@ class CompraDao extends Dao
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         /** @var \PDOStatement $consulta */
         $consulta =$objetoAccesoDato->RetornarConsulta("
-            INSERT INTO compras (fecha,articulo,precio,usuario_id)
-            VALUES (:fecha,:articulo,:precio,:usuario_id)
+            INSERT INTO compras (fecha,marca,modelo,precio,usuario_id)
+            VALUES (:fecha,:marca,:modelo,:precio,:usuario_id)
         ");
         $consulta->bindValue(':fecha',$entidad->getFecha(), \PDO::PARAM_STR);
-        $consulta->bindValue(':articulo', $entidad->getArticulo(), \PDO::PARAM_STR);
+        $consulta->bindValue(':marca', $entidad->getMarca(), \PDO::PARAM_STR);
+        $consulta->bindValue(':modelo', $entidad->getModelo(), \PDO::PARAM_STR);
         $consulta->bindValue(':precio', $entidad->getPrecio(), \PDO::PARAM_STR);
         $consulta->bindValue(':usuario_id', $entidad->getUsuarioId(), \PDO::PARAM_INT);
         $consulta->execute();
@@ -33,14 +35,16 @@ class CompraDao extends Dao
         $consulta =$objetoAccesoDato->RetornarConsulta("
             UPDATE compras  SET 
              fecha = :fecha,
-             articulo = :articulo,
+             marca = :marca,
+             modelo = :modelo,
              precio = :precio,
              usuario_id = :usuario_id,
              imagen = :imagen
             WHERE id = :id
         ");
         $consulta->bindValue(':fecha',$entidad->getFecha(), \PDO::PARAM_STR);
-        $consulta->bindValue(':articulo', $entidad->getArticulo(), \PDO::PARAM_STR);
+        $consulta->bindValue(':marca', $entidad->getMarca(), \PDO::PARAM_STR);
+        $consulta->bindValue(':modelo', $entidad->getMarca(), \PDO::PARAM_STR);
         $consulta->bindValue(':precio', $entidad->getPrecio(), \PDO::PARAM_STR);
         $consulta->bindValue(':usuario_id', $entidad->getUsuarioId(), \PDO::PARAM_INT);
         $consulta->bindValue(':imagen', $entidad->getImagen(), \PDO::PARAM_STR);
@@ -56,18 +60,44 @@ class CompraDao extends Dao
     public static function traerTodos()
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta =$objetoAccesoDato->RetornarConsulta(" SELECT  c.id, c.fecha , c.articulo, c.precio, u.nombre ,u.id AS usuarioId , c.imagen
+        $consulta =$objetoAccesoDato->RetornarConsulta(" SELECT  c.id, c.fecha , c.marca, c.modelo, c.precio, u.email ,u.id AS usuarioId , c.imagen
                 FROM  compras AS c
                 JOIN usuarios AS u ON c.usuario_id = u.id");
         $consulta->execute();
         return $consulta->fetchAll(\PDO::FETCH_CLASS, Compra::class);
     }
 
+    public static function traerModelosPorMarca($marca)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta =$objetoAccesoDato->RetornarConsulta(" 
+            SELECT   c.modelo
+            FROM  compras AS c
+            WHERE c.marca = :marca
+            GROUP BY modelo
+            ");
+        $consulta->bindValue(':marca', $marca, \PDO::PARAM_STR);
+        $consulta->execute();
+        return  $consulta->fetchAll(\PDO::FETCH_COLUMN);
+    }
+
+    public static function traerProductos()
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta =$objetoAccesoDato->RetornarConsulta(" 
+            SELECT   c.marca, c.modelo 
+            FROM  compras AS c
+            GROUP BY modelo , marca
+            ");
+        $consulta->execute();
+        return  $consulta->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
     public static function traerTodosParaElUsuario($usuarioId)
     {
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         $consulta =$objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, fecha , articulo, precio, usuario_id AS usuarioId, imagen
+            " SELECT  id, fecha , marca, modelo, precio, usuario_id AS usuarioId, imagen
                 FROM  compras
                 WHERE usuario_id = :usuario_id"
         );
@@ -78,16 +108,7 @@ class CompraDao extends Dao
 
     public static function traerUno($id)
     {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        $consulta =$objetoAccesoDato->RetornarConsulta(
-            "SELECT id, nombre, clave, sexo, perfil 
-                FROM usuarios 
-                WHERE id = :id"
-        );
-        $consulta->bindValue(':id',$id,\PDO::PARAM_INT);
-        $consulta->execute();
-        $usuario = $consulta->fetchObject(Compra::class);
-        return $usuario;
+       throw  new SysNotImplementedException();
     }
 
 }
