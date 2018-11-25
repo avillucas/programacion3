@@ -1,9 +1,7 @@
 <?php
 namespace Core\Middleware;
 
-use Core\Exceptions\SysException;
 use Core\Exceptions\SysValidationException;
-use Psr\Http\Message\ServerRequestInterface;
 
 class MWparaAutentificar
 {
@@ -21,8 +19,6 @@ class MWparaAutentificar
    * @apiExample Como usarlo:
    *    ->add(\MWparaAutenticar::class . ':VerificarUsuario')
    */
-
-
     private function verificarBarearTokenOrFail($request)
     {
         try
@@ -36,20 +32,32 @@ class MWparaAutentificar
         return $token;
     }
 
-	public function VerificarUsuario($request, $response, $next)
+	public function verificarUsuario($request, $response, $next)
     {
        $token= $this->verificarBarearTokenOrFail($request);
         return $next($request, $response);
 	}
 
-    public function VerificarUsuarioAdministrador($request, $response, $next)
+    public function verificarUsuarioAdministrador($request, $response, $next)
     {
         $token= $this->verificarBarearTokenOrFail($request);
-        $userData = AutentificadorJWT::ObtenerData($token);
+        $userData = AutentificadorJWT::obtenerData($token);
         if(!$userData->isAdmin)
         {
             throw new SysValidationException("Debe ser un administrador para ingresar a esta funcionalidad");
         }
         return $next($request, $response);
     }
+
+    public function verificarUsuarioAdministradorOHola($request, $response, $next)
+    {
+        $token= $this->verificarBarearTokenOrFail($request);
+        $userData = AutentificadorJWT::obtenerData($token);
+        if(!$userData->isAdmin)
+        {
+            throw new SysValidationException("hola");
+        }
+        return $next($request, $response);
+    }
+
 }

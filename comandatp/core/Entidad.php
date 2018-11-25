@@ -1,44 +1,10 @@
 <?php
 namespace Core;
 
-use Core\Dao\IDao;
-
-abstract class Entidad extends IDao
+abstract class Entidad
 {
-    /**
-     * Crea la entidad y agrega a la base
-     * @param $data
-     * @return mixed
-     */
-    abstract static function crear($data);
-
-    /**
-     * Modifica la entidad y la guarda persiste
-     * @param $id
-     * @param $data
-     * @return mixed
-     */
-    abstract static function modificar($id, $data);
-
-    /**
-     * Elimina la persistencia de la entidad
-     * @param $id
-     * @return mixed
-     */
-    abstract static function borrar($id);
-
-    /**
-     * Crea/Modifica la entidad en su persistencia
-     */
-    public function save()
-    {
-        if(isset($this->id)){
-            $this->actualizar();
-            return ;
-        }
-        $this->id =  $this->insertar();
-        return ;
-    }
+    /** @var int $id */
+    public $id = null;
 
     /**
      * Retorna una version en array de la entidad
@@ -64,5 +30,31 @@ abstract class Entidad extends IDao
     {
         return json_encode($this->__toArray(),true);
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasId()
+    {
+        return boolval(null != $this->getId());
+    }
+
+
 
 }
