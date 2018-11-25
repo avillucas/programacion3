@@ -4,6 +4,7 @@ use Core\Api\UsuarioApi;
 use Core\Api\MozoApi;
 use Core\Api\SocioApi;
 use Core\Api\PreparadorApi;
+use Core\Api\MesaApi;
 use Core\Middleware\MWparaCORS;
 use Core\Middleware\MWparaAutentificar;
 // Routes
@@ -12,12 +13,12 @@ $app->group('/', function () {
     $this->post('login/', UsuarioApi::class . ':login');
     //usuarios
     $this->group('usuarios', function () {
-        $this->post('/mozo', MozoApi::class . ':cargarUno');
-        $this->post('/preparador', PreparadorApi::class . ':cargarUno');
-        $this->post('/socio', SocioApi::class . ':cargarUno');
+        $this->post('/mozo/', MozoApi::class . ':cargarUno');
+        $this->post('/preparador/', PreparadorApi::class . ':cargarUno');
+        $this->post('/socio/', SocioApi::class . ':cargarUno');
     });
     //
-    $this->group('mesa', function () {
+    $this->group('mesas', function () {
         $this->post('/', MesaApi::class . ':cargarUno');
     });
 })

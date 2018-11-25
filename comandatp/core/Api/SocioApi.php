@@ -24,22 +24,22 @@ class SocioApi extends ApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        // TODO: Implement TraerUno() method.
+        throw new SysNotImplementedException();// TraerUno() method.
     }
 
     public function TraerTodos($request, $response, $args)
     {
-        // TODO: Implement TraerTodos() method.
+        throw new SysNotImplementedException();// TraerTodos() method.
     }
 
     public function BorrarUno($request, $response, $args)
     {
-        // TODO: Implement BorrarUno() method.
+        throw new SysNotImplementedException();// BorrarUno() method.
     }
 
     public function ModificarUno($request, $response, $args)
     {
-        // TODO: Implement ModificarUno() method.
+        throw new SysNotImplementedException();// ModificarUno() method.
     }
 
 

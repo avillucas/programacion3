@@ -3,19 +3,37 @@
  * Created by PhpStorm.
  * User: Lucas-notebook
  * Date: 25/11/2018
- * Time: 6:02 PM
+ * Time: 6:27 PM
  */
 
 namespace Core\Dao;
 
 
 use Core\Entidad;
-use Core\Sector;
+use Core\EstadoMesa;
+use Core\Exceptions\SysException;
+use Core\Exceptions\SysNotImplementedException;
+use Core\Exceptions\SysValidationException;
 
-class SectorEntidadDao extends  EntidadDao
+class EstadoMesaEntidadDao extends EntidadDao
 {
+    const DEFAULT_ID = 1;
+
+    /** @var int $id */
+    public  $id ;
     /** @var string $nombre */
     public $nombre;
+
+
+    public static function getDefault()
+    {
+        $estado =  EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::DEFAULT_ID);
+        if(!$estado)
+        {
+            throw  new SysException('No existe el estado de mesa definido como default');
+        }
+        return $estado;
+    }
 
     public static function insertar(Entidad $entidad)
     {
@@ -39,13 +57,13 @@ class SectorEntidadDao extends  EntidadDao
 
     static function traerUno($id)
     {
-       $query = 'SELECT id, nombre FROM sectores ';
-       return parent::baseTraerUno(SectorEntidadDao::class,$id,$query);
+        $query = "SELECT id,nombre FROM mesas_estado ";
+        return  parent::baseTraerUno(EstadoMesaEntidadDao::class,$id,$query);
     }
 
     public function getEntidad()
     {
-        return new Sector($this->id,$this->nombre);
+        return new EstadoMesa($this->id,$this->nombre);
     }
 
 

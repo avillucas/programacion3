@@ -12,6 +12,8 @@ namespace Core;
 abstract class Estado
 {
 
+    /** @var int $id */
+    protected  $id ;
     /** @var string $nombre */
     protected $nombre;
 
@@ -19,9 +21,10 @@ abstract class Estado
      * Estado constructor.
      * @param string $nombre
      */
-    public function __construct($nombre)
+    public function __construct($id = null,$nombre)
     {
-        $this->nombre = $nombre;
+        $this->setId($id);
+        $this->setNombre($nombre);
     }
 
     /**
@@ -40,5 +43,20 @@ abstract class Estado
         $this->nombre = $nombre;
     }
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
 }

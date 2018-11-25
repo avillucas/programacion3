@@ -3,6 +3,8 @@
 namespace Core\Api;
 
 
+use Core\Dao\MesaEntidadDao;
+use Core\Mesa;
 use Slim\Http\Request;
 use Slim\Http\UploadedFile;
 
@@ -10,27 +12,30 @@ class MesaApi extends ApiUsable
 {
     public function CargarUno($request, $response, $args)
     {
-        // TODO: Implement CargarUno() method.
+        $data = $this->getParams($request);
+        $mesa = new Mesa($data['codigo'],null);
+        MesaEntidadDao::save($mesa);
+        return $response->withJson(ApiUsable::RESPUESTA_CREADO,200);
     }
 
     public function TraerUno($request, $response, $args)
     {
-        // TODO: Implement TraerUno() method.
+        throw new SysNotImplementedException();// TraerUno() method.
     }
 
     public function TraerTodos($request, $response, $args)
     {
-        // TODO: Implement TraerTodos() method.
+        throw new SysNotImplementedException();// TraerTodos() method.
     }
 
     public function BorrarUno($request, $response, $args)
     {
-        // TODO: Implement BorrarUno() method.
+        throw new SysNotImplementedException();// BorrarUno() method.
     }
 
     public function ModificarUno($request, $response, $args)
     {
-        // TODO: Implement ModificarUno() method.
+        throw new SysNotImplementedException();// ModificarUno() method.
     }
 
 
