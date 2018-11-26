@@ -13,7 +13,6 @@ use Core\Entidad;
 use Core\EstadoMesa;
 use Core\Exceptions\SysException;
 use Core\Exceptions\SysNotImplementedException;
-use Core\Exceptions\SysValidationException;
 
 class EstadoMesaEntidadDao extends EntidadDao
 {
@@ -64,6 +63,15 @@ class EstadoMesaEntidadDao extends EntidadDao
     public function getEntidad()
     {
         return new EstadoMesa($this->id,$this->nombre);
+    }
+
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT e.id,e.nombre 
+          FROM  mesas_estado AS e
+        ';
+        return parent::queyArray($query);
     }
 
 

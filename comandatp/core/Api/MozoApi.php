@@ -2,6 +2,7 @@
 namespace Core\Api;
 
 
+use Core\Dao\MozoEntidadDao;
 use Core\Dao\UsuarioEntidadDao;
 
 class MozoApi extends ApiUsable
@@ -17,15 +18,15 @@ class MozoApi extends ApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerUno() method.
+        $mesa = MozoEntidadDao::traerUno($args['id']);
+        return $response->withJson($mesa->__toArray(), 200);
     }
 
     public function TraerTodos($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerTodos() method.
+        $todos = MozoEntidadDao::traerTodosConRelaciones();
+        return $response->withJson($todos, 200);
     }
-
-
 
     public function BorrarUno($request, $response, $args)
     {

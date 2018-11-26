@@ -89,10 +89,10 @@ estado de ese pedido como “en preparación” y agregarle un tiempo  (en minut
 teniendo en cuenta que puede haber más de un empleado en el mismo puesto .ej: dos bartender
 o tres cocineros ( el usuario loguedao determina si es posible hacerlo )
 
-PUT  comandas/preparar 
+PUT  pedidos/preparar 
 {
-	comandaId: 1 
-	tiempoEstimado: 30 
+	comanda_id: 1 
+	tiempo_estimado: 30 
 }
 
 

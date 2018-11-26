@@ -58,5 +58,14 @@ class EmpleadoEntidadDao extends EntidadDao
       return new Empleado($this->id,boolval($this->activo));
     }
 
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT  e.id, e.activo  
+          FROM  empleados AS e
+        ';
+        return parent::queyArray($query);
+    }
+
 
 }

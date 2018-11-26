@@ -131,21 +131,19 @@ class UsuarioEntidadDao extends EntidadDao
      */
     public static function traerTodos()
     {
-        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-        /** @var \PDOStatement $consulta */
-        $consulta = $objetoAccesoDato->RetornarConsulta(
-            " SELECT  id, email , clave,  perfil
-                FROM  usuarios"
-        );
-        $consulta->execute();
-        /** @var Usuario[] $usuario */
-        $usuarios = $consulta->fetchAll(\PDO::FETCH_CLASS, UsuarioEntidadDao::class.'::crearUno');
-        return $usuarios;
+        $query = '
+          SELECT s.id, s.email, s.clave , s.nombre, s.empleado_id
+          FROM  usuarios AS s
+        ';
+        return parent::baseTraerTodos(UsuarioEntidadDao::class,$query);
     }
 
     public static function traerUno($id)
     {
-        $query= "SELECT id, email, clave,  perfil FROM usuarios";
+        $query = '
+          SELECT s.id, s.email, s.clave , s.nombre, s.empleado_id
+          FROM  usuarios AS s
+        ';
         return parent::baseTraerUno(UsuarioEntidadDao::class,$id,$query);
     }
 
@@ -190,5 +188,16 @@ class UsuarioEntidadDao extends EntidadDao
         return $usuarioDao->getEntidad();
 
     }
+
+    static function traerTodosConRelaciones()
+    {
+
+        $query = '
+          SELECT s.id, s.email, s.clave , s.nombre, s.empleado_id
+          FROM  usuarios AS s
+        ';
+        return parent::queyArray($query);
+    }
+
 
 }

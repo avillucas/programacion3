@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lucas-notebook
- * Date: 25/11/2018
- * Time: 7:26 PM
- */
-
 namespace Core\Dao;
 
 
@@ -70,8 +63,20 @@ class ComandaEntidadDao extends EntidadDao
     {
         $mozo = MozoEntidadDao::traerUno($this->mozo_id);
         $mesa = MesaEntidadDao::traerUno($this->mesa_id);
-        $comanda = new Comanda($mozo,$mesa,$this->nombre_cliente,$this->codigo);
+        $comanda = new Comanda($this->id,$mozo,$mesa,$this->nombre_cliente,$this->codigo);
        return $comanda;
     }
+
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT c.id, c.codigo , m.nombre as mozo ,me.codigo as mesa 
+          FROM  comandas AS c 
+          JOIN mozos AS mo  ON mo.id = c.mozo_id
+          JOIN mesas AS me  ON me.id = c.mesa_id
+        ';
+         return parent::queyArray($query);
+    }
+
 
 }

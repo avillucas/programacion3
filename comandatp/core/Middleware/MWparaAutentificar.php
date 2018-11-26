@@ -1,7 +1,16 @@
 <?php
 namespace Core\Middleware;
 
+use Core\Alimento;
+use Core\Dao\AlimentoEntidadDao;
+use Core\Dao\PedidoEntidadDao;
+use Core\Dao\PreparadorEntidadDao;
+use Core\Dao\UsuarioEntidadDao;
 use Core\Exceptions\SysValidationException;
+use Core\Pedido;
+use Core\Preparador;
+use Core\Usuario;
+use Slim\Http\Request;
 
 class MWparaAutentificar
 {
@@ -49,7 +58,6 @@ class MWparaAutentificar
         return $next($request, $response);
     }
 
-
     public function verificarMozo($request, $response, $next)
     {
         $token= $this->verificarBarearTokenOrFail($request);
@@ -72,6 +80,25 @@ class MWparaAutentificar
         return $next($request, $response);
     }
 
-
+    public function verificarPreparadorPedido(Request $request, $response, $next)
+    {
+        $token= $this->verificarBarearTokenOrFail($request);
+        $payload = AutentificadorJWT::obtenerData($token);
+        if(!$payload->isPreparador)
+        {
+            throw new SysValidationException("Debe ser un empleado preparador para ingresar a esta funcionalidad");
+        }
+        //verificar si el alimento del pedido pertenece al sector de preparador
+        $pedidoId = $request->getParam('pedido_id');
+        /** @var Preparador $preparador */
+        $preparador = PreparadorEntidadDao::traerUnoPorEmpleadoId($payload->empledo_id);
+        /** @var Pedido $pedido */
+        $pedido = PedidoEntidadDao::traerOFallar($pedidoId);
+        if($preparador->getSector()->getId() != $pedido->getAlimento()->getSector()->getId())
+        {
+            throw new SysValidationException("El preparador (".$preparador->getSector()->getId().") y el alimento (".$pedido->getAlimento()->getSector()->getId().") no pertenecen al mismo sector");
+        }
+        return $next($request, $response);
+    }
 
 }

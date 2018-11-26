@@ -73,4 +73,15 @@ class PreparadorEntidadDao extends  EntidadDao
         return new Preparador($this->id,$empleado,$sector);
     }
 
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT p.id, p.empleado_id, s.nombre AS sector 
+          FROM  preparadores AS p
+          JOIN sectores AS s ON s.id = p.sector_id
+        ';
+        return parent::queyArray($query);
+    }
+
+
 }

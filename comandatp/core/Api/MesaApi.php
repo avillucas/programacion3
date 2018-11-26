@@ -20,12 +20,14 @@ class MesaApi extends ApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerUno() method.
+        $mesa = MesaEntidadDao::traerUno($args['id']);
+        return $response->withJson($mesa->__toArray(), 200);
     }
 
     public function TraerTodos($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerTodos() method.
+        $todos = MesaEntidadDao::traerTodosConRelaciones();
+        return $response->withJson($todos, 200);
     }
 
     public function BorrarUno($request, $response, $args)

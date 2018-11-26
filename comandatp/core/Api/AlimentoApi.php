@@ -28,12 +28,14 @@ class AlimentoApi extends ApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerUno() method.
+        $alimento = AlimentoEntidadDao::traerUno($args['id']);
+        return $response->withJson($alimento->__toArray(), 200);
     }
 
     public function TraerTodos($request, $response, $args)
     {
-        throw new SysNotImplementedException();// TraerTodos() method.
+       $todos = AlimentoEntidadDao::traerTodosConRelaciones();
+       return $response->withJson($todos, 200);
     }
 
     public function BorrarUno($request, $response, $args)

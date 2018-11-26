@@ -48,5 +48,13 @@ class SectorEntidadDao extends  EntidadDao
         return new Sector($this->id,$this->nombre);
     }
 
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT s.id, s.nombre 
+          FROM  sectores AS s
+        ';
+        return parent::queyArray($query);
+    }
 
 }

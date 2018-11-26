@@ -50,6 +50,8 @@ abstract  class EntidadDao
      */
     abstract static function traerTodos();
 
+    abstract  static  function traerTodosConRelaciones();
+
     /**
      * Retorna una entidad en base al id enviado
      * @param $id
@@ -99,6 +101,15 @@ abstract  class EntidadDao
         $consulta = $objetoAccesoDato->RetornarConsulta($query);
         $consulta->execute();
         return $consulta->fetchAll(\PDO::FETCH_CLASS, $dao);
+    }
+
+
+    protected function queyArray($query)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta = $objetoAccesoDato->RetornarConsulta($query);
+        $consulta->execute();
+        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
     }
 
 }

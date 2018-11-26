@@ -3,6 +3,7 @@ namespace Core\Dao;
 
 use Core\Empleado;
 use Core\Entidad;
+use Core\Exceptions\SysNotFoundException;
 use Core\Mozo;
 
 class MozoEntidadDao extends  EntidadDao
@@ -66,11 +67,19 @@ class MozoEntidadDao extends  EntidadDao
         return $dao->getEntidad();
     }
 
-
     public function getEntidad()
     {
         $empleado = EmpleadoEntidadDao::traerUno($this->empleado_id);
         return new Mozo($this->id,$empleado);
+    }
+
+    static function traerTodosConRelaciones()
+    {
+        $query = '
+          SELECT SELECT m.id, m.empleado_id  
+          FROM  mozos AS m
+        ';
+        return parent::queyArray($query);
     }
 
 

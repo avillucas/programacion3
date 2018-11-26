@@ -22,13 +22,16 @@ class Comanda extends Entidad
 
     /**
      * Comanda constructor.
+     * @param $id
      * @param Mozo $mozo
      * @param Mesa $mesa
-     * @param string $nombre_cliente
-     * @param string $codigo
+     * @param $nombre_cliente
+     * @param null $codigo
+     * @throws SysValidationException
      */
-    public function __construct(Mozo $mozo, Mesa $mesa, $nombre_cliente, $codigo = null)
+    public function __construct($id, Mozo $mozo, Mesa $mesa, $nombre_cliente, $codigo = null)
     {
+        $this->setId($id);
         $this->setMozo($mozo);
         $this->setMesa($mesa);
         $this->setMozo($mozo);

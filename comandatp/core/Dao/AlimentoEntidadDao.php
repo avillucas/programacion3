@@ -50,6 +50,17 @@ class AlimentoEntidadDao extends  EntidadDao
         return parent::baseTraerTodos(AlimentoEntidadDao::class,$query);
     }
 
+    static function traerTodosConRelaciones()
+    {
+        $query  = '
+        SELECT a.id, a.nombre , a.precio , s.nombre AS sector
+        FROM  alimentos AS a
+        JOIN  sectores AS s ON s.id = a.sector_id
+        ';
+        return parent::queyArray($query);
+    }
+
+
     static function traerUno($id)
     {
         $query  = 'SELECT id, nombre , precio , sector_id FROM  alimentos ';
@@ -62,5 +73,9 @@ class AlimentoEntidadDao extends  EntidadDao
         return new Alimento($this->id,$this->nombre,$this->precio,$sector);
     }
 
+    public static function collectionMap(AlimentoEntidadDao $alimento)
+    {
+      return $alimento->getEntidad()->__toArray();
+    }
 
 }

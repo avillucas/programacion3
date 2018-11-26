@@ -55,6 +55,17 @@ class MesaEntidadDao extends  EntidadDao
         return parent::baseTraerTodos(MesaEntidadDao::class,$query);
     }
 
+
+    static function traerTodosConRelaciones()
+    {
+        $query  = '
+        SELECT m.id, m.codigo , e.nombre AS estado
+        FROM  mesas AS m
+        JOIN  mesas_estado AS e ON e.id = m.estado_id
+        ';
+        return parent::queyArray($query);
+    }
+
     static function traerUno($id)
     {
        $query  = 'SELECT id, codigo , estado_id FROM mesas ';

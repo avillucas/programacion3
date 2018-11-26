@@ -20,12 +20,12 @@ class ComandaApi extends  ApiUsable
         $payload = $this->getPayloadActual($request);
         $mozo = MozoEntidadDao::traerUnoPorEmpleadoId($payload->empledo_id);
         $mesa = MesaEntidadDao::traerUnoPorCodigo($data['codigo_mesa']);
-        $comanda = new Comanda($mozo,$mesa,$data['nombre_cliente']);
+        $comanda = new Comanda(null,$mozo,$mesa,$data['nombre_cliente']);
         ComandaEntidadDao::save($comanda);
         foreach($data['pedidos'] as $pedidoRequest)
         {
             $alimento = AlimentoEntidadDao::traerUno($pedidoRequest['alimento_id']);
-            $pedido = new Pedido($comanda,$alimento,null,intval($pedidoRequest['cantidad']));
+            $pedido = new Pedido(null,$comanda,$alimento,null,intval($pedidoRequest['cantidad']));
             PedidoEntidadDao::save($pedido);
         }
         return $response->withJson([

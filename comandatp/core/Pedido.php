@@ -10,6 +10,7 @@ namespace Core;
 
 
 use Core\Dao\EstadoPedidoEntidadDao;
+use Core\Dao\PreparadorEntidadDao;
 
 class Pedido extends Entidad
 {
@@ -40,7 +41,6 @@ class Pedido extends Entidad
     /** @var Comanda $comanda */
     private $comanda;
 
-
     /**
      * Pedido constructor.
      * @param Alimento $alimento
@@ -52,8 +52,9 @@ class Pedido extends Entidad
      * @param \DateTime $momentoDeEntrega
      * @param EstadoPedido $estado
      */
-    public function __construct(Comanda $comanda, Alimento $alimento, Preparador $encargado=null, $cantidad,  $tiempoEstimado=null, \DateTime $momentoCreacion=null, \DateTime $momentoPreparacionInicio=null, \DateTime $momentoDeEntrega=null, EstadoPedido $estado=null)
+    public function __construct($id = null, Comanda $comanda, Alimento $alimento, Preparador $encargado=null, $cantidad,  $tiempoEstimado=null, \DateTime $momentoCreacion=null, \DateTime $momentoPreparacionInicio=null, \DateTime $momentoDeEntrega=null, EstadoPedido $estado=null)
     {
+        $this->setId($id);
         $this->setComanda($comanda);
         $this->setAlimento($alimento);
         $this->setEncargado($encargado);
@@ -68,7 +69,6 @@ class Pedido extends Entidad
         }
         $this->setEstado($estado);
     }
-
 
     function __toArray()
     {
@@ -225,4 +225,23 @@ class Pedido extends Entidad
         $this->estado = $estado;
     }
 
+    public function isPendiente()
+    {
+        return boolval(EstadoPedidoEntidadDao::PENDIENTE_ID == $this->getEstado()->getId());
+    }
+
+    public function isEnPreparacion()
+    {
+        return boolval(EstadoPedidoEntidadDao::EN_PREPARACION_ID == $this->getEstado()->getId());
+    }
+
+    public function isParaServir()
+    {
+        return boolval(EstadoPedidoEntidadDao::PARA_SERVIR_ID == $this->getEstado()->getId());
+    }
+
+    public function isCancelado()
+    {
+        return boolval(EstadoPedidoEntidadDao::CANCELADO_ID == $this->getEstado()->getId());
+    }
 }
