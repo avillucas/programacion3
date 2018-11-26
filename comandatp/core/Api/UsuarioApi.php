@@ -21,8 +21,7 @@ class UsuarioApi extends ApiUsable
         $clave = $this->getParam($request,'clave');
         $usuario = Usuario::login($email, $clave);
         //TOKEN
-        $data = $usuario->__toArray();
-        $data['isAdmin'] = boolval($usuario->isSocio());
+        $data = $usuario->traerTokenPayload();
         $token = AutentificadorJWT::crearToken($data);
         return $response->withJson(['token'=>$token],200);
     }

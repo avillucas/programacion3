@@ -10,6 +10,7 @@ namespace Core\Dao;
 
 
 use Core\Entidad;
+use Core\Exceptions\SysNotFoundException;
 use Core\Exceptions\SysNotImplementedException;
 use Core\Mesa;
 
@@ -50,7 +51,8 @@ class MesaEntidadDao extends  EntidadDao
 
     static function traerTodos()
     {
-        throw new SysNotImplementedException();// traerTodos() method.
+        $query  = 'SELECT id, codigo , estado_id FROM mesas ';
+        return parent::baseTraerTodos(MesaEntidadDao::class,$query);
     }
 
     static function traerUno($id)
@@ -59,10 +61,24 @@ class MesaEntidadDao extends  EntidadDao
        return parent::baseTraerUno(MesaEntidadDao::class,$id,$query);
     }
 
+    public static function traerUnoPorCodigo($codigo)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta = $objetoAccesoDato->RetornarConsulta('SELECT id, codigo , estado_id FROM mesas WHERE codigo= :codigo');
+        $consulta->bindValue(':codigo', $codigo, \PDO::PARAM_STR);
+        $consulta->execute();
+        /** @var EntidadDao $dao */
+        $dao = $consulta->fetchObject(MesaEntidadDao::class);
+        if(!$dao){
+            throw  new SysNotFoundException("no existe una mesa con ese codigo");
+        }
+        return $dao->getEntidad();
+    }
+
     public function getEntidad()
     {
         $estado = (isset($this->estado_id)) ? EstadoMesaEntidadDao::traerUno($this->estado_id):null;
-        return new Mesa($this->id, $estado);
+        return new Mesa($this->id,$this->codigo, $estado);
     }
 
 

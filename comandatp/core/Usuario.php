@@ -1,7 +1,10 @@
 <?php
+
 namespace Core;
 
 use Core\Dao\AccesoDatos;
+use Core\Dao\MozoEntidadDao;
+use Core\Dao\PreparadorEntidadDao;
 use Core\Dao\UsuarioEntidadDao;
 use Core\Exceptions\SysNotFoundException;
 use Core\Exceptions\SysNotImplementedException;
@@ -19,14 +22,13 @@ class Usuario extends Entidad
     /** @var Empleado $empleado */
     private $empleado;
 
-    public function __construct($id=null, $nombre, $email, $clave, Empleado $empleado=null )
+    public function __construct($id = null, $nombre, $email, $clave, Empleado $empleado = null)
     {
         $this->setId($id);
         $this->setNombre($nombre);
         $this->setEmail($email);
         $this->setClave($clave);
-        if(isset($empleado))
-        {
+        if (isset($empleado)) {
             $this->setEmpleado($empleado);
         }
     }
@@ -63,7 +65,7 @@ class Usuario extends Entidad
         $this->email = $email;
     }
 
-     /**
+    /**
      * @return Empleado
      */
     public function getEmpleado()
@@ -95,10 +97,10 @@ class Usuario extends Entidad
 
     public function setClave($strClave)
     {
-      $this->clave = Usuario::encriptar($strClave);
+        $this->clave = Usuario::encriptar($strClave);
     }
 
-   /**
+    /**
      * @param $id del usuario a eliminar
      * @return bool
      * @throws SysNotFoundException
@@ -113,7 +115,7 @@ class Usuario extends Entidad
 
     public function __toArray()
     {
-        return ['id' =>$this->id, 'email' =>$this->email,'empledo'=>$this->getEmpleado()->getId()];
+        return ['id' => $this->id, 'email' => $this->email, 'empledo_id' => $this->getEmpleado()->getId(), 'clave' => $this->getClave(), 'nombre' => $this->getNombre()];
     }
 
     /**
@@ -138,9 +140,8 @@ class Usuario extends Entidad
     {
         $usuario = UsuarioEntidadDao::traerUnoPorEmail($email);
 
-       //
-        if($usuario->getClave() != Usuario::encriptar($clave))
-        {
+        //
+        if ($usuario->getClave() != Usuario::encriptar($clave)) {
             throw new SysValidationException('El password es incorrecto');
         }
 
@@ -150,7 +151,48 @@ class Usuario extends Entidad
 
     public function isSocio()
     {
-        return boolval(null == $this->empleado );
+        return boolval(null == $this->empleado);
+    }
+
+    public function isMozo()
+    {
+        try
+        {
+            $mozo = MozoEntidadDao::traerUnoPorEmpleadoId($this->getEmpleado()->getId());
+        }
+        catch (SysNotFoundException $e)
+        {
+            return false;
+        }
+        if (!empty($mozo) ) {
+            return true;
+        }
+        return false;
+    }
+
+    public function isPreparador()
+    {
+        try
+        {
+            $preparador = PreparadorEntidadDao::traerUnoPorEmpleadoId($this->getEmpleado()->getId());
+        }
+        catch (SysNotFoundException $e)
+        {
+            return false;
+        }
+        if (!empty($preparador) ) {
+            return true;
+        }
+        return false;
+    }
+
+    public function traerTokenPayload()
+    {
+        $data = $this->__toArray();
+        $data['isSocio'] = $this->isSocio();
+        $data['isMozo'] = $this->isMozo();
+        $data['isPreparador'] = $this->isPreparador();
+        return $data;
     }
 
 }

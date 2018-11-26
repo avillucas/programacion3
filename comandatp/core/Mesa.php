@@ -20,8 +20,9 @@ class Mesa extends Entidad
      * @throws Exceptions\SysException
      * @throws SysValidationException
      */
-    public function __construct($codigo, EstadoMesa $estado = null)
+    public function __construct($id = null, $codigo, EstadoMesa $estado = null)
     {
+        $this->setId($id);
         $this->setCodigo($codigo);
         if(!isset($estado))
         {

@@ -9,17 +9,17 @@
 namespace Core;
 
 
-class Alimento
+class Alimento extends Entidad
 {
 
     /** @var string $nombre */
-    public $nombre;
+    private $nombre;
 
     /** @var float $precio */
-    public $precio;
+    private $precio;
 
-    /** @var int $sector_id */
-    public $sector_id;
+    /** @var Sector $sector */
+    private $sector;
 
     /**
      * Alimento constructor.
@@ -27,11 +27,12 @@ class Alimento
      * @param float $precio
      * @param int $sector_id
      */
-    public function __construct($nombre, $precio, $sector_id)
+    public function __construct($id = null, $nombre, $precio, Sector $sector)
     {
-        $this->nombre = $nombre;
-        $this->precio = $precio;
-        $this->sector_id = $sector_id;
+        $this->setId($id);
+        $this->setNombre($nombre);
+        $this->setPrecio($precio);
+        $this->setSector($sector);
     }
 
 
@@ -64,23 +65,34 @@ class Alimento
      */
     public function setPrecio($precio)
     {
-        $this->precio = $precio;
+        $this->precio = floatval($precio);
     }
 
     /**
-     * @return int
+     * @return Sector
      */
-    public function getSectorId()
+    public function getSector()
     {
-        return $this->sector_id;
+        return $this->sector;
     }
 
     /**
-     * @param int $sector_id
+     * @param Sector $sector
      */
-    public function setSectorId($sector_id)
+    public function setSector( Sector $sector)
     {
-        $this->sector_id = $sector_id;
+        $this->sector = $sector;
     }
+
+    function __toArray()
+    {
+      return [
+        'id' => $this->getId(),
+        'nombre' => $this->getNombre(),
+        'precio' => $this->getPrecio(),
+        'sector' => $this->getSector()->getNombre()
+      ];
+    }
+
 
 }

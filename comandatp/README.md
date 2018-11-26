@@ -35,20 +35,32 @@ empleados correspondientes ver estos pedidos en su listado de “pendientes” (
 #al mozo se le da un código único alfanumérico de 5 caracteres al cliente que le permite
 identificar su pedido ( LEYENDO EL RESPONSE )
 
-POST comandas/ 
+POST comandas/tomar
 REQUEST
 {
-	data:{
-		mesa: CODIGO MESA,
-		nombreCliente:
-		foto:
-		pedidos:[
-			{
-				alimento:
-				cantidad:
-			}
-		]
-	}
+	{
+	codigo_mesa: 12345,
+	nombre_cliente: "tito",
+	foto: null,
+	pedidos:[
+		{
+			alimento_id: 1
+			cantidad: 3
+		},
+		{
+			alimento_id: 2
+			cantidad: 2
+		},
+		{
+			alimento_id: 9
+			cantidad: 1
+		},
+		{
+			alimento_id: 10
+			cantidad: 2
+		}
+	]
+}
 }
 RESPONSE : 
 {
@@ -164,3 +176,4 @@ RESPONSE
 {
 	response:"Gracias, su opinion nos ayuda a mejorar"
 }
+

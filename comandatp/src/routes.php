@@ -5,6 +5,8 @@ use Core\Api\MozoApi;
 use Core\Api\SocioApi;
 use Core\Api\PreparadorApi;
 use Core\Api\MesaApi;
+use Core\Api\AlimentosApi;
+use Core\Api\ComandaApi;
 use Core\Middleware\MWparaCORS;
 use Core\Middleware\MWparaAutentificar;
 // Routes
@@ -20,6 +22,14 @@ $app->group('/', function () {
     //
     $this->group('mesas', function () {
         $this->post('/', MesaApi::class . ':cargarUno');
+    });//
+    $this->group('alimentos', function () {
+        $this->post('/', AlimentoApi::class . ':cargarUno');
+    });
+    $this->group('comandas', function () {
+        //$this->post('/', ComandaApi::class . ':cargarUno');
+        //validar si es mozo
+        $this->post('/tomar/', ComandaApi::class . ':tomar');
     });
 })
 //->add(MWparaCORS::class .':HabilitarCORS8080')

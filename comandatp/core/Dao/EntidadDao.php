@@ -86,7 +86,19 @@ abstract  class EntidadDao
         $consulta->execute();
         /** @var EntidadDao $dao */
         $dao = $consulta->fetchObject($dao);
+        if(!$dao)
+        {
+            throw new SysNotFoundException("La entidad (".$id.") buscada no existe");
+        }
         return $dao->getEntidad();
+    }
+
+    protected function baseTraerTodos($dao,$query)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta = $objetoAccesoDato->RetornarConsulta($query);
+        $consulta->execute();
+        return $consulta->fetchAll(\PDO::FETCH_CLASS, $dao);
     }
 
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Core\Api;
 
+use Core\Dao\EmpleadoEntidadDao;
 use Core\IO\IO;
 use Core\Middleware\AutentificadorJWT;
 use Core\Usuario;
@@ -12,9 +13,9 @@ abstract class ApiUsable
 
     const RESPUESTA_CREADO = 'creado correctamente';
 
-    public function getParams($request)
+    public function getParams(Request $request)
     {
-        return   $request->getParsedBody();
+         return   $request->getParsedBody();
     }
 
     public function getParam($request,$param,$defaultValue = null)
@@ -26,12 +27,10 @@ abstract class ApiUsable
         return $body[$param];
     }
 
-    protected function getUsuarioActual(Request $request)
+    protected function getPayloadActual(Request $request)
     {
         $data =   AutentificadorJWT::obtenerPayLoadDelRequest($request);
-        $usuario =  new Usuario($data->id,$data->email,null,$data->perfil);
-        $usuario->setClaveEncriptada($data->clave);
-        return $usuario;
+        return $data;
     }
 
     /**

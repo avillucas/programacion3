@@ -42,13 +42,30 @@ class MozoEntidadDao extends  EntidadDao
 
     static function traerTodos()
     {
-        throw new SysNotImplementedException();// traerTodos() method.
+        $query = 'SELECT id, empleado_id FROM mozos ';
+        return parent::baseTraerTodos(MozoEntidadDao::class,$query);
     }
 
     static function traerUno($id)
     {
-        throw new SysNotImplementedException();// traerUno() method.
+        $query = 'SELECT id, empleado_id FROM mozos ';
+        return parent::baseTraerUno(MozoEntidadDao::class,$id,$query);
     }
+
+    public static function traerUnoPorEmpleadoId($empleadoId)
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();        
+        $consulta = $objetoAccesoDato->RetornarConsulta( 'SELECT id, empleado_id FROM mozos  WHERE empleado_id = :empleadoId');
+        $consulta->bindValue(':empleadoId', $empleadoId, \PDO::PARAM_INT);
+        $consulta->execute();
+        /** @var EntidadDao $dao */
+        $dao = $consulta->fetchObject(MozoEntidadDao::class);
+        if(!$dao){
+            throw  new SysNotFoundException("no existe un mozo para ese empleado");
+        }
+        return $dao->getEntidad();
+    }
+
 
     public function getEntidad()
     {

@@ -38,26 +38,40 @@ class MWparaAutentificar
         return $next($request, $response);
 	}
 
-    public function verificarUsuarioAdministrador($request, $response, $next)
+    public function verificarSocio($request, $response, $next)
     {
         $token= $this->verificarBarearTokenOrFail($request);
         $userData = AutentificadorJWT::obtenerData($token);
-        if(!$userData->isAdmin)
+        if(!$userData->isSocio)
         {
-            throw new SysValidationException("Debe ser un administrador para ingresar a esta funcionalidad");
+            throw new SysValidationException("Debe ser un socio para ingresar a esta funcionalidad");
         }
         return $next($request, $response);
     }
 
-    public function verificarUsuarioAdministradorOHola($request, $response, $next)
+
+    public function verificarMozo($request, $response, $next)
     {
         $token= $this->verificarBarearTokenOrFail($request);
         $userData = AutentificadorJWT::obtenerData($token);
-        if(!$userData->isAdmin)
+        if(!$userData->isMozo)
         {
-            throw new SysValidationException("hola");
+            throw new SysValidationException("Debe ser un mozo para ingresar a esta funcionalidad");
         }
         return $next($request, $response);
     }
+
+    public function verificarPreparador($request, $response, $next)
+    {
+        $token= $this->verificarBarearTokenOrFail($request);
+        $userData = AutentificadorJWT::obtenerData($token);
+        if(!$userData->isPreparador)
+        {
+            throw new SysValidationException("Debe ser un empleado preparador para ingresar a esta funcionalidad");
+        }
+        return $next($request, $response);
+    }
+
+
 
 }
