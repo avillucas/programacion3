@@ -25,18 +25,25 @@ $app->group('/', function () {
     $this->group('pedidos', function () {
         $this->post('/', PedidoApi::class . ':CargarUno')->add(MWparaAutentificar::class.':verificarSocio');
         $this->get('/', PedidoApi::class . ':TraerTodos')->add(MWparaAutentificar::class.':verificarSocio');
+        $this->get('/pendientes/',PedidoApi::class.':TraerPendientes')->add(MWparaAutentificar::class.':verificarUsuario');
+        $this->get('/paraservir/',PedidoApi::class.':TraerParaServir')->add(MWparaAutentificar::class.':verificarMozo');
+        $this->get('/{id}/', PedidoApi::class . ':TraerUno')->add(MWparaAutentificar::class.':verificarSocio');
         //TODO encontrar porque es que no toma el put
         $this->post('/preparar/', PedidoApi::class . ':preparar')->add(MWparaAutentificar::class.':verificarPreparadorPedido');
-        $this->get('/{id}/', PedidoApi::class . ':TraerUno')->add(MWparaAutentificar::class.':verificarSocio');
+        $this->post('/alaorden/', PedidoApi::class . ':alaorden')->add(MWparaAutentificar::class.':verificarPreparadorPedido');
+
     })
         ;
     //
     $this->group('mesas', function () {
-        $this->post('/', MesaApi::class . ':CargarUno');
-        $this->get('/', MesaApi::class . ':TraerTodos');
-        $this->get('/{id}/', MesaApi::class . ':TraerUno');
+        $this->post('/', MesaApi::class . ':CargarUno')->add(MWparaAutentificar::class.':verificarSocio');
+        $this->post('/comiendo/', MesaApi::class . ':MarcarClienteComiendo')->add(MWparaAutentificar::class.':verificarMozo');
+        $this->post('/pagando/', MesaApi::class . ':MarcarPagando')->add(MWparaAutentificar::class.':verificarMozo');
+        $this->post('/cerrar/', MesaApi::class . ':cerrar')->add(MWparaAutentificar::class.':verificarSocio');
+        $this->get('/', MesaApi::class . ':TraerTodos')->add(MWparaAutentificar::class.':verificarSocio');
+        $this->get('/{id}/', MesaApi::class . ':TraerUno')->add(MWparaAutentificar::class.':verificarSocio');
     })
-    ->add(MWparaAutentificar::class.':verificarSocio');
+    ;
     $this->group('alimentos', function () {
         $this->post('/', AlimentoApi::class . ':CargarUno');
         $this->get('/', AlimentoApi::class . ':TraerTodos');
@@ -47,7 +54,7 @@ $app->group('/', function () {
     $this->group('comandas', function () {
         //$this->post('/', ComandaApi::class . ':cargarUno');
         //validar si es mozo
-        $this->post('/tomar/', ComandaApi::class . ':tomar')->add(MWparaAutentificar::class.':verificarMozo');;
+        $this->post('/tomar/', ComandaApi::class . ':tomar')->add(MWparaAutentificar::class.':verificarMozo');
     });
 })
 //->add(MWparaCORS::class .':HabilitarCORS8080')

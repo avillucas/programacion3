@@ -115,7 +115,11 @@ class Usuario extends Entidad
 
     public function __toArray()
     {
-        return ['id' => $this->id, 'email' => $this->email, 'empledo_id' => $this->getEmpleado()->getId(), 'clave' => $this->getClave(), 'nombre' => $this->getNombre()];
+        $usuario =  ['id' => $this->id, 'email' => $this->email, 'clave' => $this->getClave(), 'nombre' => $this->getNombre()];
+        if(!empty($this->getEmpleado())){
+            $usuario['empledo_id'] =  $this->getEmpleado()->getId();
+        }
+        return $usuario;
     }
 
     /**
@@ -151,11 +155,14 @@ class Usuario extends Entidad
 
     public function isSocio()
     {
-        return boolval(null == $this->empleado);
+        return boolval(null == $this->getEmpleado());
     }
 
     public function isMozo()
     {
+        if($this->isSocio()){
+            return false;
+        }
         try
         {
             $mozo = MozoEntidadDao::traerUnoPorEmpleadoId($this->getEmpleado()->getId());
@@ -172,6 +179,9 @@ class Usuario extends Entidad
 
     public function isPreparador()
     {
+        if($this->isSocio()){
+            return false;
+        }
         try
         {
             $preparador = PreparadorEntidadDao::traerUnoPorEmpleadoId($this->getEmpleado()->getId());

@@ -16,7 +16,11 @@ use Core\Exceptions\SysNotImplementedException;
 
 class EstadoMesaEntidadDao extends EntidadDao
 {
-    const DEFAULT_ID = 1;
+    const CERRADA_ID = 1;
+    const ESPERANDO_ID = 2;
+    const COMIENDO_ID = 3;
+    const PAGANDO_ID = 4;
+
 
     /** @var int $id */
     public  $id ;
@@ -26,7 +30,7 @@ class EstadoMesaEntidadDao extends EntidadDao
 
     public static function getDefault()
     {
-        $estado =  EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::DEFAULT_ID);
+        $estado =  EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::CERRADA_ID);
         if(!$estado)
         {
             throw  new SysException('No existe el estado de mesa definido como default');
@@ -74,5 +78,23 @@ class EstadoMesaEntidadDao extends EntidadDao
         return parent::queyArray($query);
     }
 
+    public static function traerEstadoCerrado()
+    {
+        return EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::CERRADA_ID);
+    }
 
+    public static function traerEstadoEsperando()
+    {
+        return EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::ESPERANDO_ID);
+    }
+
+    public static function traerEstadoComiendo()
+    {
+        return EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::COMIENDO_ID);
+    }
+
+    public static function traerEstadoPagando()
+    {
+        return EstadoMesaEntidadDao::traerUno(EstadoMesaEntidadDao::PAGANDO_ID);
+    }
 }

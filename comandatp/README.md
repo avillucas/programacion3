@@ -30,7 +30,7 @@ That's it! Now go build something cool.
 #Proyecto 
 
 # Si al mozo le hacen un pedido (POST comandas/) de un vino , una cerveza y unas empanadas, deberían los
-empleados correspondientes ver estos pedidos en su listado de “pendientes” (GET comandas/pendientes). Con la opción de tomar una foto de la mesa con sus integrantes y relacionarlo con el pedido.
+empleados correspondientes ver estos pedidos en su listado de “pendientes” (GET pedidos/pendientes). Con la opción de tomar una foto de la mesa con sus integrantes y relacionarlo con el pedido.
 
 #al mozo se le da un código único alfanumérico de 5 caracteres al cliente que le permite
 identificar su pedido ( LEYENDO EL RESPONSE )
@@ -89,9 +89,9 @@ estado de ese pedido como “en preparación” y agregarle un tiempo  (en minut
 teniendo en cuenta que puede haber más de un empleado en el mismo puesto .ej: dos bartender
 o tres cocineros ( el usuario loguedao determina si es posible hacerlo )
 
-PUT  pedidos/preparar 
+POST  pedidos/preparar 
 {
-	comanda_id: 1 
+	pedido_id: 1 
 	tiempo_estimado: 30 
 }
 
@@ -99,14 +99,14 @@ PUT  pedidos/preparar
 # El empleado que tomar ese pedido para prepararlo debe poner el estado “listo para servir”,
 cuando el pedido está listo.
 
-PUT  comandas/alaorden 
+POST  pedido/alaorden 
 {
-	comandaId: 1 	
+	pedido_id: 1 	
 }
 
 # Cualquiera de los socios pude ver en todo momento el estado de todos los pedidos. ( dependiendo del usuario ve todos o ve solo los que puede llegar a tomar , el socio puede ver todo )
 
-GET comandas/
+GET pedidos/
 RESPONSE : 
 {
 	data:[

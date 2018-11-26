@@ -3,23 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="153d3a85-c055-4afa-a998-a9e5c2980546" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../comandatp/.idea/comandatp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/.idea/comandatp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../comandatp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../comandatp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/CompraApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/CompraApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/IApiUsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/IApiUsable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/UsuarioApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/UsuarioApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Compra.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Compra.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/CompraDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/CompraDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/UsuarioDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/UsuarioDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/1-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/2-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/3-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/4-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/5-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/IMGCompras/6-PAPA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/collection.v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/info/collection.v1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/collection.v2.json" beforeDir="false" afterPath="$PROJECT_DIR$/info/collection.v2.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,67 +16,6 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <executablePath>composer</executablePath>
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1764507506">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.41" value="1" />
-          <entry key="project.open.time.65" value="1" />
-          <entry key="project.open.time.73" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="htaccess" value="1" />
-          <entry key="jpeg" value="1" />
-          <entry key="json" value="2" />
-          <entry key="md" value="2" />
-          <entry key="php" value="150" />
-          <entry key="phtml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Image" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="Markdown" value="2" />
-          <entry key="PHP" value="151" />
-          <entry key="htaccess" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="1" />
-          <entry key="json" value="3" />
-          <entry key="md" value="380" />
-          <entry key="php" value="10714" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JSON" value="3" />
-          <entry key="Markdown" value="380" />
-          <entry key="PHP" value="10694" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SQL" value="20" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.composer.actions">
-        <counts>
-          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.new.class">
-        <counts>
-          <entry key="PHP Class.type" value="6" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -103,9 +28,6 @@
                 <element signature="e#197#310#0#PHP" />
                 <element signature="e#316#610#0#PHP" />
                 <element signature="e#616#855#0#PHP" />
-                <element signature="e#861#1419#0#PHP" />
-                <element signature="e#1425#1539#0#PHP" />
-                <element signature="e#1545#1662#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -114,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="510">
               <caret line="32" column="63" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="63" />
             </state>
           </provider>
@@ -123,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/Dao/CompraDao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+            <state relative-caret-position="321">
+              <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
               <folding>
                 <element signature="e#147#1054#0#PHP" />
                 <element signature="e#365#547#0#PHP" />
@@ -133,8 +55,7 @@
                 <element signature="e#2186#2296#0#PHP" />
                 <element signature="e#2302#2756#0#PHP" />
                 <element signature="e#2762#3238#0#PHP" />
-                <element signature="e#3244#3785#0#PHP" />
-                <element signature="e#3791#3887#0#PHP" />
+                <element signature="e#3244#3625#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -193,12 +114,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
@@ -256,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,15 +178,11 @@
               <item name="parcial2" type="b2602c69:ProjectViewProjectNode" />
               <item name="parcial2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="parcial2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parcial2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,16 +228,19 @@
       <workItem from="1542030696991" duration="495000" />
       <workItem from="1542031991205" duration="517000" />
       <workItem from="1542059297561" duration="4932000" />
+      <workItem from="1542067770548" duration="596000" />
+      <workItem from="1543091571883" duration="123000" />
+      <workItem from="1543156037424" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31258000" />
+    <option name="totallyTimeSpent" value="32275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.2677761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.27987897" />
       <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,8 +276,16 @@
       </list>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/core/Dao/CompraDao.php</url>
+          <line>86</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
@@ -452,13 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/Dao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Dao/IDao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -470,9 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding>
-            <element signature="e#27#51#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,32 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#600#1089#0#PHP" />
-            <element signature="e#718#774#0#PHP" />
-            <element signature="e#860#933#0#PHP" />
-            <element signature="e#1013#1083#0#PHP" />
-            <element signature="e#1359#1457#0#PHP" />
-            <element signature="e#1751#1922#0#PHP" />
-            <element signature="e#1928#2502#0#PHP" />
-            <element signature="e#2175#2261#0#PHP" />
-            <element signature="e#2360#2449#0#PHP" />
-            <element signature="e#2508#2713#0#PHP" />
-            <element signature="e#2545#2640#0#PHP" />
-            <element signature="e#2719#2896#0#PHP" />
-            <element signature="e#2902#3003#0#PHP" />
-            <element signature="e#3009#3534#0#PHP" />
-            <element signature="e#4086#4178#0#PHP" />
-            <element signature="e#4184#4293#0#PHP" />
-            <element signature="e#4299#4334#0#PHP" />
-            <element signature="e#4339#4400#0#PHP" />
-            <element signature="e#4406#4439#0#PHP" />
-            <element signature="e#4444#4513#0#PHP" />
-            <element signature="e#4519#4552#0#PHP" />
-            <element signature="e#4557#4624#0#PHP" />
-            <element signature="e#4739#4772#0#PHP" />
-            <element signature="e#4777#4846#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,37 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="50" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="e#23#46#0#PHP" expanded="true" />
-            <element signature="e#797#851#0#PHP" />
-            <element signature="e#860#941#0#PHP" />
-            <element signature="e#998#1070#0#PHP" />
-            <element signature="e#950#1022#0#PHP" />
-            <element signature="e#1031#1108#0#PHP" />
-            <element signature="e#1117#1201#0#PHP" />
-            <element signature="e#1210#1285#0#PHP" />
-            <element signature="e#1297#1387#0#PHP" />
-            <element signature="e#1393#1596#0#PHP" />
-            <element signature="e#1602#1786#0#PHP" />
-            <element signature="e#1792#1887#0#PHP" />
-            <element signature="e#1893#1981#0#PHP" />
-            <element signature="e#1987#2190#0#PHP" />
-            <element signature="e#2024#2118#0#PHP" />
-            <element signature="e#2196#2316#0#PHP" />
-            <element signature="e#2322#2391#0#PHP" />
-            <element signature="e#2397#2476#0#PHP" />
-            <element signature="e#2482#2543#0#PHP" />
-            <element signature="e#2549#2582#0#PHP" />
-            <element signature="e#2587#2660#0#PHP" />
-            <element signature="e#2818#2851#0#PHP" />
-            <element signature="e#2856#2925#0#PHP" />
-            <element signature="e#2666#2699#0#PHP" />
-            <element signature="e#2704#2771#0#PHP" />
-            <element signature="e#2777#2809#0#PHP" />
-            <element signature="e#2814#2883#0#PHP" />
-            <element signature="e#2889#2919#0#PHP" />
-            <element signature="e#2924#2999#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,22 +453,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-          <folding>
-            <element signature="e#107#667#0#PHP" />
-            <element signature="e#672#993#0#PHP" />
-            <element signature="e#740#964#0#PHP" />
-            <element signature="e#845#964#0#PHP" />
-            <element signature="e#996#1168#0#PHP" />
-            <element signature="e#1591#1951#0#PHP" />
-            <element signature="e#1805#1902#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.php">
+    <entry file="file://$PROJECT_DIR$/public/IMGCompras/11-PAPAaaaa.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/Dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="32" column="63" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="63" />
+        <state relative-caret-position="188">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -626,20 +474,21 @@
             <element signature="e#197#310#0#PHP" />
             <element signature="e#316#610#0#PHP" />
             <element signature="e#616#855#0#PHP" />
-            <element signature="e#861#1419#0#PHP" />
-            <element signature="e#1425#1539#0#PHP" />
-            <element signature="e#1545#1662#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/IMGCompras/11-PAPAaaaa.jpeg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="63" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="63" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Dao/CompraDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        <state relative-caret-position="321">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
           <folding>
             <element signature="e#147#1054#0#PHP" />
             <element signature="e#365#547#0#PHP" />
@@ -648,8 +497,7 @@
             <element signature="e#2186#2296#0#PHP" />
             <element signature="e#2302#2756#0#PHP" />
             <element signature="e#2762#3238#0#PHP" />
-            <element signature="e#3244#3785#0#PHP" />
-            <element signature="e#3791#3887#0#PHP" />
+            <element signature="e#3244#3625#0#PHP" />
           </folding>
         </state>
       </provider>

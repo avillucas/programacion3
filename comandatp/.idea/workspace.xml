@@ -2,28 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6e4c2c-8ac2-4af4-9c6e-dd73cf192925" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/Api/PedidoApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Dao/EncuestaDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Encuesta.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/AlimentoApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/AlimentoApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Api/ComandaApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/ComandaApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Api/MesaApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/MesaApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Api/MozoApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/MozoApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Comanda.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Comanda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/AlimentoEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/AlimentoEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/ComandaEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/ComandaEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/EmpleadoEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/EmpleadoEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/EntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/EntidadDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Api/PedidoApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Api/PedidoApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/EstadoPedidoEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/EstadoPedidoEntidadDao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Dao/MesaEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/MesaEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/MozoEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/MozoEntidadDao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/PreparadorEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/PreparadorEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/SectorEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/SectorEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Dao/UsuarioEntidadDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Dao/UsuarioEntidadDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Pedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Pedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Mesa.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Mesa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../parcial2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../parcial2/info/collection.v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../parcial2/info/collection.v1.json" afterDir="false" />
@@ -41,12 +31,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/Api/PedidoApi.php">
+        <entry file="file://$PROJECT_DIR$/core/Dao/EncuestaDao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="311">
+              <caret line="50" column="87" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
               <folding>
-                <element signature="e#28#60#0#PHP" expanded="true" />
+                <element signature="e#29#47#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,9 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getPerdil</find>
-      <find>insertar</find>
-      <find>crear</find>
       <find>actuali</find>
       <find>invalido</find>
       <find>cre</find>
@@ -86,6 +73,9 @@
       <find>new Comanda(</find>
       <find>isMozo</find>
       <find>actua</find>
+      <find>pedidos</find>
+      <find>codigo</find>
+      <find>MarcarClienteComiendo</find>
     </findStrings>
     <replaceStrings>
       <replace>static::</replace>
@@ -106,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/Models/EnumModel.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/core/Middleware/MWparaCORS.php" />
         <option value="$PROJECT_DIR$/core/Exceptions/SysValidationException.php" />
         <option value="$PROJECT_DIR$/core/Middleware/AutentificadorJWT.php" />
@@ -133,30 +121,32 @@
         <option value="$PROJECT_DIR$/core/Alimento.php" />
         <option value="$PROJECT_DIR$/core/EstadoPedido.php" />
         <option value="$PROJECT_DIR$/core/Api/ApiUsable.php" />
-        <option value="$PROJECT_DIR$/core/Mesa.php" />
         <option value="$PROJECT_DIR$/core/Api/AlimentoApi.php" />
         <option value="$PROJECT_DIR$/core/Dao/AlimentoEntidadDao.php" />
-        <option value="$PROJECT_DIR$/core/Api/MesaApi.php" />
-        <option value="$PROJECT_DIR$/core/Dao/MesaEntidadDao.php" />
-        <option value="$PROJECT_DIR$/core/Api/UsuarioApi.php" />
         <option value="$PROJECT_DIR$/core/Dao/EmpleadoEntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Dao/PreparadorEntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Dao/SectorEntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Dao/UsuarioEntidadDao.php" />
-        <option value="$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Api/MozoApi.php" />
-        <option value="$PROJECT_DIR$/core/Dao/EntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Comanda.php" />
-        <option value="$PROJECT_DIR$/core/Api/ComandaApi.php" />
         <option value="$PROJECT_DIR$/core/Dao/ComandaEntidadDao.php" />
-        <option value="$PROJECT_DIR$/core/Usuario.php" />
         <option value="$PROJECT_DIR$/core/Dao/MozoEntidadDao.php" />
         <option value="$PROJECT_DIR$/core/Dao/EstadoPedidoEntidadDao.php" />
-        <option value="$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php" />
-        <option value="$PROJECT_DIR$/src/routes.php" />
         <option value="$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php" />
-        <option value="$PROJECT_DIR$/core/Api/PedidoApi.php" />
         <option value="$PROJECT_DIR$/core/Pedido.php" />
+        <option value="$PROJECT_DIR$/core/Dao/EntidadDao.php" />
+        <option value="$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php" />
+        <option value="$PROJECT_DIR$/core/Api/PedidoApi.php" />
+        <option value="$PROJECT_DIR$/core/Api/UsuarioApi.php" />
+        <option value="$PROJECT_DIR$/core/Usuario.php" />
+        <option value="$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php" />
+        <option value="$PROJECT_DIR$/core/Api/ComandaApi.php" />
+        <option value="$PROJECT_DIR$/core/Mesa.php" />
+        <option value="$PROJECT_DIR$/core/Api/MesaApi.php" />
+        <option value="$PROJECT_DIR$/core/Dao/MesaEntidadDao.php" />
+        <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/core/Encuesta.php" />
+        <option value="$PROJECT_DIR$/core/Dao/EncuestaDao.php" />
       </list>
     </option>
   </component>
@@ -227,6 +217,12 @@
               <item name="comandatp" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="comandatp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comandatp" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="Dao" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -292,12 +288,12 @@
       <workItem from="1541462738313" duration="3979000" />
       <workItem from="1541509765597" duration="437000" />
       <workItem from="1541906398522" duration="127000" />
-      <workItem from="1543156344895" duration="42419000" />
+      <workItem from="1543156344895" duration="47718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70312000" />
+    <option name="totallyTimeSpent" value="75611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -329,20 +325,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/Exceptions/SysException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dependencies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -392,13 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="22" column="19" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Empleado.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -495,16 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Mesa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Alimento.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -522,44 +487,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/MesaEntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-          <folding>
-            <element signature="e#122#139#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Dao/AlimentoEntidadDao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="59" column="41" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/EmpleadoEntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="62" selection-start-column="6" selection-end-line="66" selection-end-column="41" />
-          <folding>
-            <element signature="e#251#317#0#PHP" />
-            <element signature="e#322#876#0#PHP" />
-            <element signature="e#574#694#0#PHP" />
-            <element signature="e#882#1016#0#PHP" />
-            <element signature="e#1022#1152#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="e#27#58#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,72 +500,6 @@
           <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding>
             <element signature="e#122#139#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/UsuarioEntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="e#464#554#0#PHP" />
-            <element signature="e#559#1001#0#PHP" />
-            <element signature="e#1007#1248#0#PHP" />
-            <element signature="e#1254#1344#0#PHP" />
-            <element signature="e#1349#1914#0#PHP" />
-            <element signature="e#1920#2867#0#PHP" />
-            <element signature="e#2125#2295#0#PHP" />
-            <element signature="e#13#122#0" />
-            <element signature="e#79#122#0" />
-            <element signature="e#86#122#0" />
-            <element signature="e#2544#2768#0#PHP" />
-            <element signature="e#2652#2768#0#PHP" />
-            <element signature="e#2873#3755#0#PHP" />
-            <element signature="e#3117#3303#0#PHP" />
-            <element signature="e#5#147#0" />
-            <element signature="e#3761#4168#0#PHP" />
-            <element signature="e#3937#4037#0#PHP" />
-            <element signature="e#5#52#0" />
-            <element signature="e#4174#4216#0#PHP" />
-            <element signature="e#4918#4952#0#PHP" />
-            <element signature="e#4957#5318#0#PHP" />
-            <element signature="e#5026#5149#0#PHP" />
-            <element signature="e#5324#5496#0#PHP" />
-            <element signature="e#5501#6263#0#PHP" />
-            <element signature="e#5680#5867#0#PHP" />
-            <element signature="e#17#132#1" />
-            <element signature="e#6094#6214#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="e#122#139#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/MozoApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#28#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/MesaApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="23" column="60" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="23" selection-end-column="60" />
-          <folding>
-            <element signature="e#29#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,16 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Api/ComandaApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding>
-            <element signature="e#27#44#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Comanda.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -670,22 +525,6 @@
           <folding>
             <element signature="e#24#71#0#PHP" expanded="true" />
             <element signature="e#2079#2150#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/EntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="19" />
-          <folding>
-            <element signature="e#164#242#0#PHP" />
-            <element signature="e#312#391#0#PHP" />
-            <element signature="e#463#531#0#PHP" />
-            <element signature="e#601#711#0#PHP" />
-            <element signature="e#716#953#0#PHP" />
-            <element signature="e#813#922#0#PHP" />
-            <element signature="e#959#1043#0#PHP" />
           </folding>
         </state>
       </provider>
@@ -701,13 +540,6 @@
             <element signature="e#1368#1498#0#PHP" />
             <element signature="e#1504#1689#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="162" column="35" selection-start-line="162" selection-start-column="35" selection-end-line="162" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -738,40 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#7#31#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="e#34#52#0#PHP" expanded="true" />
-            <element signature="e#107#667#0#PHP" />
-            <element signature="e#672#993#0#PHP" />
-            <element signature="e#740#964#0#PHP" />
-            <element signature="e#845#964#0#PHP" />
-            <element signature="e#996#1168#0#PHP" />
-            <element signature="e#1174#1562#0#PHP" />
-            <element signature="e#1368#1513#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Pedido.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -782,12 +580,227 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/Middleware/MWparaAutentificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="e#336#896#0#PHP" />
+            <element signature="e#901#1222#0#PHP" />
+            <element signature="e#969#1193#0#PHP" />
+            <element signature="e#1074#1193#0#PHP" />
+            <element signature="e#1403#1791#0#PHP" />
+            <element signature="e#1597#1742#0#PHP" />
+            <element signature="e#1797#2182#0#PHP" />
+            <element signature="e#1990#2133#0#PHP" />
+            <element signature="e#2188#2600#0#PHP" />
+            <element signature="e#2387#2551#0#PHP" />
+            <element signature="e#2606#3703#0#PHP" />
+            <element signature="e#2818#2981#0#PHP" />
+            <element signature="e#3351#3654#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/MozoApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="59" />
+          <folding>
+            <element signature="e#28#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/UsuarioEntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="183" column="23" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="23" />
+          <folding>
+            <element signature="e#464#554#0#PHP" />
+            <element signature="e#559#1001#0#PHP" />
+            <element signature="e#1007#1248#0#PHP" />
+            <element signature="e#1254#1344#0#PHP" />
+            <element signature="e#1349#1914#0#PHP" />
+            <element signature="e#1920#2867#0#PHP" />
+            <element signature="e#2125#2295#0#PHP" />
+            <element signature="e#2544#2768#0#PHP" />
+            <element signature="e#2652#2768#0#PHP" />
+            <element signature="e#2873#3755#0#PHP" />
+            <element signature="e#3117#3303#0#PHP" />
+            <element signature="e#3761#4168#0#PHP" />
+            <element signature="e#3937#4037#0#PHP" />
+            <element signature="e#4174#4216#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/UsuarioApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#27#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/PedidoEntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="289" column="20" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/Api/PedidoApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="281">
+          <caret line="44" column="15" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="44" selection-end-column="15" />
           <folding>
-            <element signature="e#28#60#0#PHP" expanded="true" />
+            <element signature="e#398#1497#0#PHP" />
+            <element signature="e#775#945#0#PHP" />
+            <element signature="e#1258#1490#0#PHP" />
+            <element signature="e#1278#1485#0#PHP" />
+            <element signature="e#1503#2091#0#PHP" />
+            <element signature="e#1890#2084#0#PHP" />
+            <element signature="e#1910#2079#0#PHP" />
+            <element signature="e#2097#2284#0#PHP" />
+            <element signature="e#2290#2467#0#PHP" />
+            <element signature="e#2474#3155#0#PHP" />
+            <element signature="e#2752#3100#0#PHP" />
+            <element signature="e#2888#3012#0#PHP" />
+            <element signature="e#3012#3100#0#PHP" />
+            <element signature="e#4698#5690#0#PHP" />
+            <element signature="e#2473#2587#0#PHP" />
+            <element signature="e#2593#2711#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/EntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#164#242#0#PHP" />
+            <element signature="e#312#391#0#PHP" />
+            <element signature="e#463#531#0#PHP" />
+            <element signature="e#601#711#0#PHP" />
+            <element signature="e#716#953#0#PHP" />
+            <element signature="e#813#922#0#PHP" />
+            <element signature="e#959#1043#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/ComandaApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding>
+            <element signature="e#787#1079#0#PHP" />
+            <element signature="e#1095#1275#0#PHP" />
+            <element signature="e#1115#1270#0#PHP" />
+            <element signature="e#1288#1423#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="183" column="9" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/EstadoMesaEntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+          <folding>
+            <element signature="e#122#139#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Mesa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="88" column="88" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="88" />
+          <folding>
+            <element signature="e#24#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/MesaEntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="e#640#777#0#PHP" />
+            <element signature="e#1191#1321#0#PHP" />
+            <element signature="e#1327#1499#0#PHP" />
+            <element signature="e#1506#1762#0#PHP" />
+            <element signature="e#1768#1941#0#PHP" />
+            <element signature="e#2541#2741#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="41" column="57" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="57" />
+          <folding>
+            <element signature="e#7#31#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Api/MesaApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding>
+            <element signature="e#29#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Empleado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Encuesta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/EmpleadoEntidadDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="30" column="63" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="30" selection-end-column="63" />
+          <folding>
+            <element signature="e#251#317#0#PHP" />
+            <element signature="e#574#694#0#PHP" />
+            <element signature="e#882#1016#0#PHP" />
+            <element signature="e#1022#1152#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Dao/EncuestaDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="50" column="87" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
+          <folding>
+            <element signature="e#29#47#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

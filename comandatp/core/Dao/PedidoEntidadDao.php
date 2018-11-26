@@ -252,4 +252,102 @@ class PedidoEntidadDao extends EntidadDao
         return parent::queyArray($query);
     }
 
+
+
+    static function traerTodasLasPendientePorSector($sectorId)
+    {
+        $query = '
+         SELECT  
+                p.id,          
+                p.encargado_id,
+                a.nombre AS alimento, 
+                pe.nombre AS estado,                               
+                c.codigo  AS comanda,
+                p.cantidad, 
+                p.tiempo_estimado, 
+                p.momento_creacion, 
+                p.momento_preparacion, 
+                p.momento_de_entrega 
+         FROM pedidos as p
+         LEFT JOIN  preparadores as pre ON pre.id = p.encargado_id
+         JOIN alimentos as a ON a.id = p.alimento_id
+         JOIN comandas as c ON c.id = p.comanda_id
+         JOIN  pedidos_estado as pe ON pe.id = p.estado_id 
+         WHERE p.estado_id = :estadoPedidoId
+         AND a.sector_id = :sectorId
+         ORDER BY momento_creacion DESC
+        ';
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        /** @var \PDOStatement $consulta */
+        $consulta = $objetoAccesoDato->RetornarConsulta($query);
+        $consulta->bindValue(':estadoPedidoId', EstadoPedidoEntidadDao::PENDIENTE_ID, \PDO::PARAM_INT);
+        $consulta->bindValue(':sectorId', $sectorId, \PDO::PARAM_INT);
+        $consulta->execute();
+        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+
+    static function traerTodasLasPendienteDelMozo($mozoId)
+    {
+        $query = '
+         SELECT  
+                p.id,          
+                p.encargado_id,
+                a.nombre AS alimento, 
+                pe.nombre AS estado,                               
+                c.codigo  AS comanda,
+                p.cantidad, 
+                p.tiempo_estimado, 
+                p.momento_creacion, 
+                p.momento_preparacion, 
+                p.momento_de_entrega 
+         FROM pedidos as p
+         LEFT JOIN  preparadores as pre ON pre.id = p.encargado_id
+         JOIN alimentos as a ON a.id = p.alimento_id
+         JOIN comandas as c ON c.id = p.comanda_id
+         JOIN  pedidos_estado as pe ON pe.id = p.estado_id 
+         WHERE p.estado_id = :estadoPedidoId
+         AND c.mozo_id = :mozoId
+         ORDER BY momento_creacion DESC
+        ';
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        /** @var \PDOStatement $consulta */
+        $consulta = $objetoAccesoDato->RetornarConsulta($query);
+        $consulta->bindValue(':estadoPedidoId', EstadoPedidoEntidadDao::PENDIENTE_ID, \PDO::PARAM_INT);
+        $consulta->bindValue(':mozoId', $mozoId, \PDO::PARAM_INT);
+        $consulta->execute();
+        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    static function traerParaServirDelMozo($mozoId)
+    {
+        $query = '
+         SELECT  
+                p.id,          
+                p.encargado_id,
+                a.nombre AS alimento, 
+                pe.nombre AS estado,                               
+                c.codigo  AS comanda,
+                p.cantidad, 
+                p.tiempo_estimado, 
+                p.momento_creacion, 
+                p.momento_preparacion, 
+                p.momento_de_entrega 
+         FROM pedidos as p
+         LEFT JOIN  preparadores as pre ON pre.id = p.encargado_id
+         JOIN alimentos as a ON a.id = p.alimento_id
+         JOIN comandas as c ON c.id = p.comanda_id
+         JOIN  pedidos_estado as pe ON pe.id = p.estado_id 
+         WHERE p.estado_id = :estadoParaServir
+         AND c.mozo_id = :mozoId
+         ORDER BY momento_de_entrega DESC
+        ';
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        /** @var \PDOStatement $consulta */
+        $consulta = $objetoAccesoDato->RetornarConsulta($query);
+        $consulta->bindValue(':estadoParaServir', EstadoPedidoEntidadDao::PARA_SERVIR_ID, \PDO::PARAM_INT);
+        $consulta->bindValue(':mozoId', $mozoId, \PDO::PARAM_INT);
+        $consulta->execute();
+        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }

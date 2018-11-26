@@ -79,4 +79,24 @@ class Mesa extends Entidad
        ];
     }
 
+    public function isCerrada()
+    {
+        return boolval(EstadoMesaEntidadDao::CERRADA_ID == $this->getEstado()->getId());
+    }
+
+    public function isEsperando()
+    {
+        return boolval(EstadoMesaEntidadDao::ESPERANDO_ID == $this->getEstado()->getId());
+    }
+
+    public function isComiendo()
+    {
+        return boolval(EstadoMesaEntidadDao::COMIENDO_ID == $this->getEstado()->getId());
+    }
+
+    public function isPagando()
+    {
+        return boolval(EstadoMesaEntidadDao::PAGANDO_ID == $this->getEstado()->getId());
+    }
+
 }
